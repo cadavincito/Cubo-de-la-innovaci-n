@@ -1,0 +1,16 @@
+/* Contenedor principal */
+.observatorio-page-container {
+  width: 100%;
+  /* min-height permite que crezca si es necesario y muestre el footer */
+  min-height: calc(100vh - 110px); 
+  display: flex;
+  background-color: #f4f6f9; /* Fondo neutro mientras carga */
+}
+
+/* El iframe en sí */
+.observatorio-iframe {
+  width: 100%;
+  /* Altura fija para que la ventana se vea amplia antes de llegar al footer */
+  height: calc(100vh - 110px); 
+  border: none;
+}

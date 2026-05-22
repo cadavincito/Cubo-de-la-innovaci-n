@@ -1,0 +1,44 @@
+/* =========================================
+   VARIABLES GLOBALES (Colores del Cubo)
+   ========================================= */
+:root {
+  --color-primary: #084b83; /* Azul oscuro institucional que usamos en el Topbar */
+  --color-secondary: #0b6cb5; /* Azul vibrante/cian para hovers */
+  --color-gray-light: #f4f6f9;
+  --color-white: #ffffff;
+  --color-text: #333333;
+}
+
+/* =========================================
+   RESETEO BASE (Salva la estructura de la página)
+   ========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Obligatorio para evitar bordes blancos */
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--color-gray-light);
+  color: var(--color-text);
+  overflow-x: hidden; 
+  /* Asegúrate de que aquí ya no haya ningún padding-top */
+}
+
+/* Limpieza de listas y enlaces */
+ul, li {
+  list-style: none !important; 
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+@media (max-width: 992px) {
+  .main-content {
+    padding-top: 110px;
+  }
+}

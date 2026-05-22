@@ -1,0 +1,290 @@
+/* =========================================
+   VARIABLES Y CONTENEDOR PRINCIPAL
+   ========================================= */
+.rg-landing-container {
+  font-family: 'Montserrat', sans-serif;
+  color: #4a5568;
+  background-color: #f8fafc;
+  overflow-x: hidden;
+}
+
+.rg-section {
+  padding: 80px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.rg-bg-light { background-color: #ffffff; }
+.rg-bg-dark { background-color: #002244; max-width: 100%; }
+
+.rg-section-title {
+  color: #002244;
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.rg-text-white { color: #ffffff !important; }
+
+/* =========================================
+   HERO SECTION (Glassmorphism OSCURO)
+   ========================================= */
+.rg-hero {
+  position: relative;
+  padding: 100px 5%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* 👇 1. AQUÍ ESTÁ EL CAMBIO: FONDO MUY OSCURO 👇 */
+  background-color: #001229; 
+}
+
+.rg-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  /* 👇 2. LUCES MÁS INTENSAS PARA QUE BRILLEN EN LA OSCURIDAD 👇 */
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.cyan-glow {
+  width: 400px; height: 400px;
+  background-color: #00d2ff;
+  top: -50px; right: 10%;
+}
+
+.purple-glow {
+  width: 500px; height: 500px;
+  background-color: #6d28d9;
+  bottom: -100px; left: 5%;
+}
+
+.rg-hero-glass {
+  position: relative;
+  z-index: 10;
+  /* 👇 3. TARJETA ADAPTADA A FONDO OSCURO (Cristal sutil) 👇 */
+  background: rgba(255, 255, 255, 0.03); 
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1); 
+  border-radius: 30px;
+  padding: 60px 40px;
+  max-width: 800px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4); 
+}
+
+.rg-badge {
+  display: inline-block;
+  /* 👇 4. ETIQUETA ESTILO NEÓN 👇 */
+  background: rgba(0, 210, 255, 0.1);
+  border: 1px solid rgba(0, 210, 255, 0.3);
+  color: #00d2ff;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 35px; 
+}
+
+.rg-hero-logo {
+  max-width: 400px; 
+  width: 100%; 
+  margin: 0 auto 30px auto; 
+  display: block;
+  /* Resplandor blanco sutil detrás del logo */
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.1)); 
+}
+
+.rg-hero-subtitle {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  /* 👇 5. TEXTO EN GRIS CLARO PARA QUE SE LEA EN EL FONDO OSCURO 👇 */
+  color: #e2e8f0; 
+  margin-bottom: 40px;
+  max-width: 650px; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================================
+   BOTONES
+   ========================================= */
+.rg-cta-btn {
+  background: linear-gradient(90deg, #6d28d9 0%, #00d2ff 100%);
+  color: white;
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(109, 40, 217, 0.3);
+}
+
+.rg-cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(109, 40, 217, 0.5);
+}
+
+.rg-cta-btn-outline {
+  background: transparent;
+  color: #6d28d9;
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: 2px solid #6d28d9;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.rg-cta-btn-outline:hover {
+  background: #6d28d9;
+  color: white;
+}
+
+.rg-center-btn { text-align: center; margin-top: 40px; }
+
+/* =========================================
+   TARJETAS Y GRIDS
+   ========================================= */
+.rg-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.rg-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease;
+  border: 1px solid #f1f5f9;
+}
+
+.rg-card:hover { transform: translateY(-10px); }
+
+.rg-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.rg-card h3 { color: #002244; margin-bottom: 15px; font-size: 1.4rem; }
+.rg-card p { line-height: 1.6; font-size: 1rem; }
+
+/* =========================================
+   BENEFICIOS
+   ========================================= */
+.rg-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.rg-benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+}
+
+.rg-benefit-icon {
+  font-size: 2.5rem;
+  background: #f8fafc;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.rg-benefit-item h4 { color: #6d28d9; margin: 0 0 10px 0; font-size: 1.2rem; }
+.rg-benefit-item p { margin: 0; font-size: 0.95rem; line-height: 1.5; }
+
+/* =========================================
+   PASOS (STEPS)
+   ========================================= */
+.rg-steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.rg-step {
+  flex: 1;
+  min-width: 220px;
+  text-align: center;
+}
+
+.rg-step-number {
+  width: 60px; height: 60px;
+  background: #00d2ff;
+  color: #002244;
+  font-size: 1.8rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  box-shadow: 0 0 20px rgba(0, 210, 255, 0.4);
+}
+
+.rg-step p { color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; }
+
+/* =========================================
+   FORMULARIO (IFRAME)
+   ========================================= */
+.rg-form-section {
+  padding: 100px 5%;
+  background-color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rg-form-header { text-align: center; max-width: 700px; margin-bottom: 40px; }
+.rg-form-subtitle { font-size: 1.1rem; line-height: 1.6; }
+.rg-form-subtitle strong { color: #6d28d9; }
+
+.rg-iframe-wrapper {
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+.rg-base44-iframe {
+  width: 100%;
+  height: 700px;
+  border: none;
+  display: block;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 768px) {
+  .rg-hero-title { font-size: 3rem; }
+  .rg-hero-glass { padding: 40px 20px; }
+  .rg-section-title { font-size: 2rem; }
+  .rg-benefits-grid { grid-template-columns: 1fr; }
+  .rg-base44-iframe { height: 800px; } /* Más alto en móviles por si los campos se apilan */
+}

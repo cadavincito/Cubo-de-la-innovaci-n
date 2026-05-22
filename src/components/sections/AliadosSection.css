@@ -1,0 +1,103 @@
+/* =========================================
+   SECCIÓN ALIADOS (Fondo blanco limpio)
+   ========================================= */
+.aliados-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.aliados-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+/* =========================================
+   ENCABEZADO
+   ========================================= */
+.aliados-header {
+  margin-bottom: 50px;
+}
+
+.aliados-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #042444;
+  margin-bottom: 15px;
+}
+
+.aliados-desc {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   CONTENEDOR DEL CARRUSEL
+   ========================================= */
+.aliados-slider-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+  /* Máscara de desvanecimiento para los bordes izquierdo y derecho */
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+/* LA PISTA QUE SE MUEVE */
+.aliados-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  /* Animación: dura 35s, velocidad constante, repetición infinita */
+  animation: slideLogos 35s linear infinite;
+}
+
+/* Si el usuario pone el mouse encima, se detiene para que lo pueda ver */
+.aliados-slider-wrapper:hover .aliados-track {
+  animation-play-state: paused;
+}
+
+/* El truco del 50%: Al duplicar los logos, moverlos la mitad exacta del ancho crea un bucle perfecto */
+@keyframes slideLogos {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-20%); } 
+}
+
+/* =========================================
+   DISEÑO DE CADA LOGO (Efecto Gris a Color)
+   ========================================= */
+.aliados-slide {
+  width: 220px; /* Ancho fijo para cada logo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.aliado-img {
+  max-width: 100%;
+  max-height: 80px;
+  object-fit: contain;
+  /* EFECTO PREMIUM: Filtro grisáceo y un poco transparente por defecto */
+  filter: grayscale(100%) opacity(60%);
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+/* Al pasar el mouse: recupera el color, opacidad al 100% y crece un poquito */
+.aliado-img:hover {
+  filter: grayscale(0%) opacity(100%);
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .aliados-title { font-size: 2rem; }
+  .aliados-slide { width: 160px; padding: 0 15px; }
+  .aliado-img { max-height: 60px; }
+}

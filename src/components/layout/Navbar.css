@@ -1,0 +1,322 @@
+/* =========================================
+   VARIABLES Y FILTROS
+   ========================================= */
+:root {
+  --filter-white-to-primary: invert(24%) sepia(35%) saturate(5422%) hue-rotate(188deg) brightness(97%) contrast(101%);
+  --nav-primary-color: #042444; /* Azul oscuro corporativo */
+  --nav-hover-color: #00d2ff;   /* Cian vibrante */
+}
+/* =========================================
+   RESETEO GLOBAL (LA MAGIA ANTI-MOVIMIENTO)
+   ========================================= */
+*, *::before, *::after {
+  box-sizing: border-box; 
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  /* IMPORTANTE: Quitamos el overflow-x: hidden de aquí para no romper el menú fijo */
+}
+
+/* Pasamos el bloqueo de movimiento al contenedor de la aplicación */
+.app-container {
+  overflow-x: hidden; 
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* =========================================
+   WRAPPER PRINCIPAL (MENÚ NORMAL, NO FIJO)
+   ========================================= */
+.navbar-wrapper {
+  position: relative; /* ESTA ES LA CLAVE: Volvemos a la normalidad */
+  width: 100%;
+  z-index: 9999;
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Montserrat', sans-serif; 
+}
+
+/* =========================================
+   TOPBAR (Franja azul superior más delgada)
+   ========================================= */
+.topbar {
+  background-color: var(--nav-primary-color); 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+.topbar-container {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4px 20px; /* Redujimos el padding arriba y abajo a solo 4px */
+}
+
+.topbar-content-right {
+  display: flex;
+  align-items: center;
+  gap: 25px; /* Menos separación entre redes y logo */
+}
+
+.topbar-icon-list {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Menos separación entre los circulitos */
+}
+
+/* Botones de redes más pequeños */
+.topbar-icon-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;  /* Antes: 36px */
+  height: 28px; /* Antes: 36px */
+  border-radius: 50%;
+  background-color: transparent; 
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.topbar-link-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.topbar-icon-item:hover {
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+/* Íconos internos más sutiles */
+.topbar-social-icon {
+  width: 14px; /* Antes: 18px */
+  height: auto;
+  display: block;
+  filter: brightness(0) invert(1);
+  transition: filter 0.2s ease;
+}
+
+.topbar-icon-item:hover .topbar-social-icon {
+  filter: var(--filter-white-to-primary);
+}
+
+/* Selector de Idiomas más compacto */
+.language-switch {
+  width: auto;
+  padding: 0 10px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 11px; /* Letra un punto más pequeña */
+  user-select: none;
+}
+
+.lang-active {
+  color: #ffffff;
+  transition: color 0.2s ease;
+}
+
+.lang-inactive {
+  color: rgba(255, 255, 255, 0.4);
+  transition: color 0.2s ease;
+}
+
+.lang-separator {
+  margin: 0 4px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.topbar-icon-item.language-switch:hover .lang-active,
+.topbar-icon-item.language-switch:hover .lang-separator {
+  color: var(--nav-primary-color);
+}
+.topbar-icon-item.language-switch:hover .lang-inactive {
+  color: rgba(4, 36, 68, 0.5);
+}
+
+.gov-co-logo-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo de GOV.CO superior más pequeño */
+.logo-gov-co {
+  height: 22px; /* Antes: 32px. Ahora se ve mucho más delicado */
+  width: auto;
+  display: block;
+  transition: opacity 0.2s ease;
+}
+
+.logo-gov-co:hover {
+  opacity: 0.8;
+}
+
+/* =========================================
+   WRAPPER PRINCIPAL (MENÚ FIJO)
+   ========================================= */
+/* (Aquí continúa el resto de tu código, no cambies nada hacia abajo) */
+
+/* =========================================
+   MAIN NAVBAR
+   ========================================= */
+.main-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: transparent; /* Lo hacemos transparente porque el fondo blanco ya está atrás */
+}
+
+.logo-img {
+  max-height: 55px;
+  width: auto;
+  display: block;
+}
+
+/* =========================================
+   ENLACES PRINCIPALES (LA LÍNEA GRÁFICA CORRECTA)
+   ========================================= */
+.nav-links {
+  display: flex;
+  gap: 35px; /* Un poco más de espacio entre enlaces para que respiren */
+  align-items: center;
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  position: relative; 
+  padding: 10px 0;
+}
+
+.nav-link {
+  font-weight: 700; /* Negrita para que se vea sólido */
+  color: var(--nav-primary-color);
+  text-transform: uppercase; /* Mayúsculas para un look más institucional */
+  font-size: 14px; /* Tamaño elegante y legible */
+  letter-spacing: 1px; /* Espaciado entre letras premium */
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s ease;
+  text-decoration: none; 
+}
+
+.nav-link:hover {
+  color: var(--nav-hover-color);
+}
+
+.dropdown-icon {
+  font-size: 10px;
+  transition: transform 0.3s ease;
+}
+
+.nav-item:hover .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+/* =========================================
+   SUBMENÚS (DROPDOWNS) - ESTÉTICA CUBO
+   ========================================= */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff; 
+  min-width: 240px; /* Un poco más ancho para que los textos no queden apretados */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); /* Sombra difuminada muy elegante */
+  border-radius: 12px; /* Bordes más redondeados y modernos */
+  padding: 12px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animación con un ligero rebote pro */
+  list-style: none; 
+  margin: 0;
+  border: 1px solid rgba(0,0,0,0.05); /* Borde súper sutil */
+}
+
+.nav-item:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-link {
+  display: block;
+  padding: 14px 25px;
+  color: var(--nav-primary-color); 
+  font-size: 15px;
+  font-weight: 600; /* Seminegrita */
+  text-transform: none; /* Dejamos que se vea normal (no todo en mayúsculas) */
+  text-decoration: none; 
+  transition: all 0.25s ease;
+  border-left: 3px solid transparent; /* Preparando el borde para el hover */
+}
+
+.dropdown-link:hover {
+  background-color: #f8fafd; /* Gris/azul levísimo de fondo */
+  color: var(--nav-hover-color); 
+  padding-left: 30px; /* Movimiento a la derecha */
+  border-left-color: var(--nav-hover-color); /* Línea azul a la izquierda al pasar el mouse */
+}
+
+/* =========================================
+   RESPONSIVE DESIGN NAVBAR
+   ========================================= */
+.mobile-menu-btn {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: var(--nav-primary-color);
+  cursor: pointer;
+  z-index: 1001;
+}
+
+@media (max-width: 992px) {
+  .topbar-content-right { flex-wrap: wrap; justify-content: center; gap: 15px; }
+  .topbar-container { padding: 10px 5%; }
+  .mobile-menu-btn { display: block; }
+  
+  .nav-links {
+    position: absolute; top: 100%; left: 0; width: 100%;
+    background-color: #ffffff; flex-direction: column;
+    align-items: flex-start; gap: 0;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+  }
+
+  .nav-links.active { max-height: 500px; }
+  .nav-item { width: 100%; padding: 0; border-bottom: 1px solid rgba(0,0,0,0.05); }
+  .nav-link { width: 100%; padding: 15px 5%; justify-content: space-between; font-size: 16px; }
+
+  .dropdown-menu {
+    position: static; box-shadow: none; opacity: 1; visibility: visible;
+    transform: none; display: none; padding: 0;
+    background-color: #f8fafd; border: none; border-radius: 0;
+  }
+
+  .nav-item:hover .dropdown-menu { display: block; }
+  
+  .dropdown-link { padding-left: 10%; border-left: none; }
+  .dropdown-link:hover { padding-left: 12%; border-left: none; }
+}

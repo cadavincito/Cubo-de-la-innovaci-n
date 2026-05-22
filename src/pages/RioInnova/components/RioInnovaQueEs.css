@@ -1,0 +1,124 @@
+.rinnova-quees-section {
+  padding: 100px 5%;
+  background-color: #ffffff; /* Mantenemos el fondo blanco para contrastar con el gris de Programas */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.rinnova-quees-header {
+  text-align: center;
+  /* Reducimos el ancho máximo para que el texto no se estire tanto a los lados */
+  max-width: 850px; 
+  margin: 0 auto 60px auto;
+}
+
+.rinnova-title-sync {
+  color: #000000;
+  /* Ajustamos el tamaño un pelín para que no abrume el párrafo */
+  font-size: 3.2rem; 
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.rinnova-quees-desc {
+  color: #4a5568;
+  /* Hacemos la fuente de la descripción un poco más grande y legible */
+  font-size: 1.2rem; 
+  line-height: 1.6;
+  margin-top: 25px; /* Acercamos un poco el texto al título */
+  max-width: 750px; /* Forzamos a que el texto baje de línea antes, dando un aspecto de bloque limpio */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 👇 COLOR DE RESALTE SINCRONIZADO (#0E5681) 👇 */
+.title-highlight-sync {
+  color: #0E5681;
+}
+
+/* Estilos para el párrafo descriptivo debajo del título */
+.rinnova-quees-desc {
+  color: #4a5568;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-top: 30px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Clase para resaltar textos en azul oscuro y negrita (Igual al PDF) */
+.rinnova-highlight {
+  color: #0E5681; 
+  font-weight: 800;
+}
+
+.rinnova-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.rinnova-info-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  position: relative;
+  overflow: hidden;
+}
+
+.rinnova-info-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: #1282C3;
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+  transform-origin: left;
+}
+
+.rinnova-info-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(18, 130, 195, 0.1);
+  border-color: rgba(18, 130, 195, 0.3);
+}
+
+.rinnova-info-card:hover::before {
+  transform: scaleX(1);
+}
+
+.rinnova-card-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: inline-block;
+  padding: 15px;
+  background: rgba(18, 130, 195, 0.05);
+  border-radius: 50%;
+  color: #1282C3;
+}
+
+.rinnova-info-card h3 {
+  color: #002244;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.rinnova-info-card p {
+  color: #4a5568;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .rinnova-title-sync { font-size: 2.5rem; }
+}

@@ -1,0 +1,170 @@
+/* =========================================
+   SECCIÓN SERVICIOS HUB (ALTO CONTRASTE)
+   ========================================= */
+.servicios-hub-section {
+  background-color: #020813; /* Fondo casi negro para máximo contraste */
+  padding: 100px 5%;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+.servicios-hub-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px auto;
+}
+
+.sh-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.sh-subtitle {
+  font-size: 1.2rem;
+  color: #a4b0be;
+  line-height: 1.6;
+}
+
+/* =========================================
+   CONTENEDOR DEL ACORDEÓN (ESTILO RUTA N)
+   ========================================= */
+.servicios-hub-accordion {
+  display: flex;
+  height: 500px; /* Altura imponente para las tarjetas */
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px; /* Separación entre tarjetas */
+}
+
+/* =========================================
+   LAS TARJETAS INDIVIDUALES
+   ========================================= */
+.sh-card {
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+  /* LA MAGIA: Comienzan con el mismo tamaño y la transición es suave */
+  flex: 1;
+  transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  align-items: flex-end; /* Coloca el texto abajo */
+  cursor: pointer;
+}
+
+/* FONDOS (Mientras pones fotos reales, usamos gradientes de la marca) */
+.observatorio-bg {
+  background: linear-gradient(135deg, #4a148c 0%, #6d28d9 100%);
+  /* Aquí pondrás tu foto después: background-image: url('...'); */
+}
+
+.smartcity-bg {
+  background: linear-gradient(135deg, #005c97 0%, #00d2ff 100%);
+  /* Aquí pondrás tu foto después: background-image: url('...'); */
+}
+
+/* Capa oscura para que el texto siempre se lea */
+.sh-card-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0) 100%);
+  z-index: 1;
+  transition: opacity 0.5s ease;
+}
+
+/* Contenido dentro de la tarjeta */
+.sh-card-content {
+  position: relative;
+  z-index: 2;
+  padding: 40px;
+  width: 100%;
+}
+
+.sh-card-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  transition: all 0.4s ease;
+  white-space: nowrap; /* Evita que el título se rompa feo al encogerse */
+}
+
+/* La información oculta (Descripción y Botón) */
+.sh-card-hidden-info p {
+  font-size: 1.05rem;
+  line-height: 1.6; /* Un poquito más de espacio entre líneas para que se vea premium */
+  color: #e0e0e0;
+  margin: 15px 0 25px 0;
+  
+  /* LAS CLAVES DE LA JUSTIFICACIÓN */
+  text-align: justify;       /* Justifica el texto */
+  text-justify: inter-word;  /* Distribuye el espacio entre palabras */
+  hyphens: auto;             /* Agrega guiones si una palabra es muy larga (opcional) */
+}
+
+/* También asegúrate de que el contenedor tenga un ancho máximo 
+   para que el bloque de texto no se pegue al borde derecho */
+.sh-card-hidden-info {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  max-width: 90%; /* Le da un pequeño respiro al final del bloque */
+}
+
+.sh-card-hidden-info p {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: #e0e0e0;
+  margin: 15px 0 25px 0;
+}
+
+/* El botón de enlace */
+.sh-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border: 1px solid white;
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.sh-btn:hover {
+  background-color: white;
+  color: #020813;
+}
+
+/* =========================================
+   EL EFECTO HOVER (CUANDO PASAS EL MOUSE)
+   ========================================= */
+.sh-card:hover {
+  flex: 2.5; /* ¡LA TARJETA CRECE! */
+}
+
+.sh-card:hover .sh-card-hidden-info {
+  max-height: 300px; /* Revela el contenido */
+  opacity: 1;
+}
+
+.sh-card:hover .sh-card-title {
+  color: #00d2ff; /* Da un pequeño brillo al título */
+}
+
+/* =========================================
+   RESPONSIVE (Celulares)
+   ========================================= */
+@media (max-width: 900px) {
+  .servicios-hub-accordion {
+    flex-direction: column; /* Apila las tarjetas verticalmente */
+    height: 800px; /* Da más espacio total */
+  }
+  .sh-card {
+    flex: 1;
+  }
+  /* En celular, es mejor que siempre se vean grandes y revelen la info al tocar */
+  .sh-card-title {
+    white-space: normal;
+  }
+}

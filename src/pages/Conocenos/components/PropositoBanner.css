@@ -1,0 +1,138 @@
+/* =========================================
+   BANNER PROPÓSITO - DISEÑO COMPACTO Y ELÉCTRICO
+   ========================================= */
+.proposito-banner-section {
+  position: relative;
+  width: 100%;
+  /* 100vh hace que ocupe exactamente toda la altura de la ventana del navegador */
+  height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centra el cuadro verticalmente */
+  background-color: #042444; 
+  overflow: hidden; 
+  padding: 0; /* Quitamos el padding para que no empuje el cuadro */
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Ajuste para que el cuadro compacto no se vea pegado al header si es muy alto */
+.proposito-content-frame.compact {
+  position: relative;
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.01); 
+  backdrop-filter: blur(25px); 
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.08); 
+  
+  padding: 40px 30px; 
+  max-width: 600px; /* Un pelín más estrecho para que se vea más estilizado */
+  width: 90%; /* Para que en móviles no toque los bordes */
+  
+  border-radius: 25px; 
+  text-align: center;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+  
+  /* Aseguramos que esté centrado visualmente */
+  margin-top: 60px; /* Compensa la altura del Navbar para que el centro sea real */
+}
+
+/* Asegúrate de que la imagen de fondo cubra TODO el 100vh */
+.proposito-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.2; /* Subí un pelín la opacidad para que se aprecie más tu imagen */
+  z-index: 1;
+}
+
+/* LA ANIMACIÓN DE FONDO SUTIL (Sin cambios aquí) */
+.proposito-animation-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+/* =========================================
+   CUADRO DE TEXTO (GLASSMORPHISM) MUCHO MÁS PEQUEÑO
+   ========================================= */
+.proposito-content-frame.compact {
+  position: relative;
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.01); /* Aún más transparente */
+  backdrop-filter: blur(25px); /* Desenfoque sutilmente menor */
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.08); /* Borde casi invisible */
+  
+  /* --- CAMBIOS DE TAMAÑO CLAVE --- */
+  padding: 35px 30px; /* Padding interno drásticamente reducido */
+  max-width: 650px; /* Ancho máximo mucho menor (antes 800px) */
+  /* ------------------------------- */
+  
+  border-radius: 25px; /* Bordes redondeados más sutiles */
+  text-align: center;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease;
+}
+
+/* Efecto 3D al pasar el mouse */
+.proposito-content-frame.compact:hover {
+  transform: translateY(-5px); /* Movimiento menor */
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.proposito-title-bold {
+  font-size: 3.2rem; /* Tamaño de letra menor (antes 4.5rem) */
+  font-weight: 900;
+  margin-bottom: 20px; /* Menos margen */
+  color: #ffffff;
+  letter-spacing: -1.5px;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================================
+   LA LÍNEA DIVISORIA AZUL Y ANIMADA (¡Nueva!)
+   ========================================= */
+.proposito-divider-accent {
+  width: 90px; /* Línea más corta */
+  height: 4px; /* Línea más delgada */
+  margin: 0 auto 30px auto; /* Menos margen */
+  border-radius: 2px;
+  
+  /* --- COLORES AZULES Y CIAN --- */
+  /* Usamos un degradado de 3 colores para un loop infinito suave */
+  background: linear-gradient(90deg, #00d2ff, #3a7bd5, #00d2ff); 
+  background-size: 200% auto; /* Duplicamos el ancho para moverlo */
+  
+  /* --- LA ANIMACIÓN DE MOVIMIENTO --- */
+  animation: dividerGradientMove 3s linear infinite; 
+}
+
+/* Definición de la animación de la línea */
+@keyframes dividerGradientMove {
+  0% { background-position: 200% center; }
+  100% { background-position: 0% center; }
+}
+
+.proposito-text-body {
+  font-size: 1.2rem; /* Tamaño de letra menor (antes 1.55rem) */
+  line-height: 1.7; /* Interlineado ajustado */
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 400;
+  max-width: 550px; /* Texto más centrado */
+  margin: 0 auto;
+}
+
+/* RESPONSIVE (Ajustes menores) */
+@media (max-width: 768px) {
+  .proposito-title-bold { font-size: 2.5rem; }
+  .proposito-text-body { font-size: 1.1rem; }
+  .proposito-content-frame.compact { padding: 30px 20px; }
+  .proposito-divider-accent { width: 70px; }
+}

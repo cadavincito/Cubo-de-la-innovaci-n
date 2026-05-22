@@ -1,0 +1,32 @@
+/* =========================================
+   RESETEO BASE (Salva la estructura de la página)
+   ========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f4f6f9;
+}
+
+/* ¡Esto quita los puntos de las listas! */
+ul, li {
+  list-style: none !important; 
+}
+
+a {
+  text-decoration: none;
+}
+
+/* =========================================
+   VARIABLES GLOBALES (Colores del Cubo)
+   ========================================= */
+:root {
+  --color-primary: #0b6cb5; 
+  --color-secondary: #4a8deb; 
+  --color-gray-light: #f5f5f5;
+  --color-white: #ffffff;
+}

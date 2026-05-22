@@ -1,0 +1,176 @@
+/* =========================================
+   ESTILOS ESPECÍFICOS: MAKER SPACE
+   ========================================= */
+.maker-detail-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 5%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* 1. MÍGAS DE PAN */
+.maker-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.maker-breadcrumb a {
+  color: #142D4C;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+  font-weight: 500;
+}
+
+.maker-breadcrumb a:hover {
+  color: #084b83; /* Tu azul institucional */
+}
+
+.maker-breadcrumb svg {
+  width: 18px;
+  height: 18px;
+}
+
+.maker-separator {
+  color: #ccc;
+  font-size: 0.8rem;
+}
+
+.maker-current {
+  color: #084b83;
+  font-weight: 700;
+}
+
+/* 2. HERO BANNER */
+.maker-hero-card {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  border-radius: 24px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  margin-bottom: 80px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.maker-hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(90deg, rgba(8, 75, 131, 0.95) 0%, rgba(8, 75, 131, 0.6) 50%, rgba(8, 75, 131, 0.1) 100%);
+  z-index: 1;
+}
+
+.maker-hero-content {
+  position: relative;
+  z-index: 2;
+  padding-left: 60px;
+  color: #ffffff;
+}
+
+.maker-hero-icon {
+  font-size: 3.5rem;
+  font-weight: 900;
+  font-style: italic;
+  font-family: serif;
+  color: #ffffff;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.maker-hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+/* 3. SECCIÓN DE INFORMACIÓN */
+.maker-info-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.maker-info-image-wrapper {
+  width: 100%;
+}
+
+.maker-info-img {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  object-fit: cover;
+}
+
+.maker-info-text-wrapper {
+  padding-right: 20px;
+}
+
+.maker-info-icon {
+  margin-bottom: 30px;
+}
+
+.maker-info-icon svg {
+  width: 45px;
+  height: 45px;
+  color: #084b83;
+}
+
+.maker-lead-text {
+  font-size: 1.3rem;
+  color: #333;
+  line-height: 1.6;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.maker-body-text {
+  font-size: 1.05rem;
+  color: #666;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 1024px) {
+  .maker-info-section { gap: 40px; }
+  .maker-hero-title { font-size: 2.8rem; }
+  .maker-lead-text { font-size: 1.15rem; }
+}
+
+@media (max-width: 768px) {
+  .maker-hero-card {
+    height: 300px;
+    border-radius: 16px;
+    margin-bottom: 50px;
+  }
+  
+  .maker-hero-overlay {
+    background: linear-gradient(90deg, rgba(8, 75, 131, 0.9) 0%, rgba(8, 75, 131, 0.7) 100%);
+  }
+
+  .maker-hero-content { padding-left: 30px; }
+  .maker-hero-title { font-size: 2.2rem; }
+
+  .maker-info-section {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .maker-info-text-wrapper { padding-right: 0; }
+  .maker-info-icon { margin-bottom: 20px; }
+}

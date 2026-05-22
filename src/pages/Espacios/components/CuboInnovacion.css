@@ -1,0 +1,172 @@
+/* =========================================
+   ESTILOS ESPECÍFICOS: CUBO DE LA INNOVACIÓN
+   ========================================= */
+.cubo-detail-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 5%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* 1. MÍGAS DE PAN */
+.cubo-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.cubo-breadcrumb a {
+  color: #142D4C;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+  font-weight: 500;
+}
+
+.cubo-breadcrumb a:hover {
+  color: #084b83; 
+}
+
+.cubo-breadcrumb svg {
+  width: 18px;
+  height: 18px;
+}
+
+.cubo-separator {
+  color: #ccc;
+  font-size: 0.8rem;
+}
+
+.cubo-current {
+  color: #084b83;
+  font-weight: 700;
+}
+
+/* 2. HERO BANNER */
+.cubo-hero-card {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  border-radius: 24px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  margin-bottom: 80px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.cubo-hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(90deg, rgba(8, 75, 131, 0.95) 0%, rgba(8, 75, 131, 0.6) 50%, rgba(8, 75, 131, 0.1) 100%);
+  z-index: 1;
+}
+
+.cubo-hero-content {
+  position: relative;
+  z-index: 2;
+  padding-left: 60px;
+  color: #ffffff;
+}
+
+.cubo-hero-icon {
+  margin-bottom: 10px;
+  opacity: 0.9;
+  color: #ffffff;
+}
+
+.cubo-hero-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+/* 3. SECCIÓN DE INFORMACIÓN */
+.cubo-info-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.cubo-info-image-wrapper {
+  width: 100%;
+}
+
+.cubo-info-img {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  object-fit: cover;
+}
+
+.cubo-info-text-wrapper {
+  padding-right: 20px;
+}
+
+.cubo-info-icon {
+  margin-bottom: 30px;
+}
+
+.cubo-info-icon svg {
+  width: 45px;
+  height: 45px;
+  color: #084b83;
+}
+
+.cubo-lead-text {
+  font-size: 1.3rem;
+  color: #333;
+  line-height: 1.6;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.cubo-body-text {
+  font-size: 1.05rem;
+  color: #666;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 1024px) {
+  .cubo-info-section { gap: 40px; }
+  .cubo-hero-title { font-size: 2.8rem; }
+  .cubo-lead-text { font-size: 1.15rem; }
+}
+
+@media (max-width: 768px) {
+  .cubo-hero-card {
+    height: 300px;
+    border-radius: 16px;
+    margin-bottom: 50px;
+  }
+  
+  .cubo-hero-overlay {
+    background: linear-gradient(90deg, rgba(8, 75, 131, 0.9) 0%, rgba(8, 75, 131, 0.7) 100%);
+  }
+
+  .cubo-hero-content { padding-left: 30px; }
+  .cubo-hero-title { font-size: 2.2rem; }
+
+  .cubo-info-section {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .cubo-info-text-wrapper { padding-right: 0; }
+  .cubo-info-icon { margin-bottom: 20px; }
+}

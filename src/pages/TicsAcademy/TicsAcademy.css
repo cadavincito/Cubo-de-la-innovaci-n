@@ -1,0 +1,157 @@
+/* =========================================
+   VARIABLES DE COLOR (ALTO IMPACTO)
+   ========================================= */
+:root {
+  --tics-orange-main: #FF6B00; /* Naranja principal vibrante */
+  --tics-orange-dark: #E65C00;
+  --tics-blue-inst: #00325b; /* Azul del Navbar */
+  --tics-bg-light: #FFF9F5; /* Fondo súper suave con tinte naranja */
+  --text-dark: #1A1A1A;
+  --text-gray: #4A4A4A;
+}
+
+.tics-academy-page {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+
+
+/* =========================================
+   ANIMACIONES DE ENTRADA (Fade Up)
+   ========================================= */
+.animate-fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUpAnim 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+
+@keyframes fadeUpAnim {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+/* =========================================
+   SECCIÓN: ¿QUÉ ES TICS ACADEMY?
+   ========================================= */
+.tics-about-section {
+  padding: 100px 5%;
+  background-color: var(--tics-bg-light); 
+}
+
+.tics-about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px; /* Un poco más de espacio entre el texto y las imágenes */
+  align-items: center;
+}
+
+.tics-section-title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #FF6B00; /* Naranja principal */
+  margin-bottom: 30px;
+  line-height: 1.1;
+}
+
+/* JUSTIFICAR EL TEXTO */
+.tics-about-text p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text-gray);
+  margin-bottom: 20px;
+  text-align: justify; /* <-- Aquí justificamos el texto */
+  hyphens: auto; /* Ayuda a que la justificación se vea más limpia separando sílabas si es necesario */
+}
+
+/* =========================================
+   ANIMACIÓN DEL GRID DE IMÁGENES
+   ========================================= */
+.tics-about-visual-grid {
+  width: 100%;
+  height: 500px; /* Alto fijo para enmascarar la animación */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  overflow: hidden; /* Oculta lo que se sale del contenedor */
+  
+  /* Máscara de difuminado arriba y abajo para efecto de aparición mágica */
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+}
+
+.scrolling-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Las imágenes de la animación */
+.grid-anim-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  background-color: #e2e8f0; /* Color por si la imagen tarda en cargar */
+}
+
+/* Clases de animación infinita */
+.col-up {
+  animation: scrollUp 25s linear infinite;
+}
+
+.col-down {
+  /* Empezamos desde arriba y bajamos */
+  animation: scrollDown 25s linear infinite;
+}
+
+/* Pausar la animación si el usuario pasa el mouse por encima (Opcional, buen detalle UX) */
+.tics-about-visual-grid:hover .scrolling-col {
+  animation-play-state: paused;
+}
+
+/* KEYFRAMES PARA EL SCROLL CONTINUO */
+@keyframes scrollUp {
+  0% { transform: translateY(0); }
+  /* Se desplaza el 50% de su propio alto + la mitad del gap, para reiniciar exacto */
+  100% { transform: translateY(calc(-50% - 10px)); } 
+}
+
+@keyframes scrollDown {
+  0% { transform: translateY(calc(-50% - 10px)); }
+  100% { transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .tics-about-container { grid-template-columns: 1fr; gap: 50px; }
+  .tics-about-visual-grid { height: 400px; }
+  .grid-anim-img { height: 180px; }
+}
+
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 992px) {
+  .tics-hero-title { font-size: 3.5rem; }
+  .tics-about-container { grid-template-columns: 1fr; gap: 40px; }
+  .tics-split-section, .tics-split-section.reverse-layout { flex-direction: column; }
+  .tics-split-visual { min-height: 400px; }
+}

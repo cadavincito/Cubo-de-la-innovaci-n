@@ -1,0 +1,123 @@
+/* =========================================
+   ESTILOS: TARJETA DE OFERTAS (Estilo Behance)
+   ========================================= */
+
+.oferta-card {
+  width: 100%; /* 👈 ESTE ES EL CAMBIO MÁGICO (antes decía 280px o 320px) */
+  height: 100%; /* 👈 ESTO HACE QUE TODAS MIDAN LO MISMO HACIA ABAJO */
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0; /* Asegúrate de que el margen sea 0 aquí para que la grilla haga el trabajo */
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden; /* Evita que las fotos se salgan de los bordes curvos */
+}
+
+.oferta-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* --- CABECERA E IMAGEN --- */
+.oferta-card-header {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.oferta-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+/* LA ETIQUETA AZUL FLOTANTE */
+.oferta-card-badge {
+  position: absolute;
+  bottom: -15px; /* La hace flotar mitad adentro, mitad afuera */
+  left: 20px;
+  background-color: #4361ee; /* Azul vibrante estilo Behance */
+  color: #ffffff;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(67, 97, 238, 0.3);
+}
+
+/* --- CUERPO DE LA TARJETA --- */
+.oferta-card-body {
+  padding: 30px 20px 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Esto hace que el cuerpo ocupe todo el espacio sobrante */
+  justify-content: space-between; /* Esto empuja el botón al final */
+}
+
+.oferta-card-date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #084b83; /* Tu azul institucional */
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.oferta-card-date svg {
+  width: 16px;
+  height: 16px;
+}
+
+.oferta-card-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0 0 10px 0;
+  line-height: 1.4;
+}
+
+.oferta-card-desc {
+  font-size: 0.9rem;
+  color: #666666;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+  flex-grow: 1; /* Ocupa el espacio sobrante */
+}
+
+/* --- ENLACE / BOTÓN --- */
+.oferta-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #4361ee;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.oferta-card-link span {
+  transition: transform 0.3s;
+}
+
+.oferta-card-link:hover {
+  color: #084b83; /* Se oscurece al pasar el mouse */
+}
+
+.oferta-card-link:hover span {
+  transform: translateX(5px); /* La flecha se mueve a la derecha */
+}
+
+.oferta-card {
+  width: 320px; 
+  flex: 0 0 auto; /* ¡Asegúrate de agregar esta línea! */
+  background-color: #ffffff;
+  /* ... resto de tu código ... */
+}

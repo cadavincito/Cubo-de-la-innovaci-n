@@ -1,0 +1,123 @@
+.instagram-section {
+  padding: 80px 0;
+  background-color: #f4f6f9;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.instagram-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.instagram-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.instagram-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #042444;
+  margin-bottom: 5px;
+}
+
+.instagram-user {
+  font-size: 1.1rem;
+  color: #0b6cb5;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.instagram-user:hover {
+  color: #042444;
+  text-decoration: underline;
+}
+
+.instagram-btn {
+  padding: 10px 25px;
+  background-color: transparent;
+  color: #042444;
+  border: 2px solid #042444;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.instagram-btn:hover {
+  background-color: #042444;
+  color: white;
+}
+
+/* LA GRILLA DE 3 FOTOS */
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.instagram-post {
+  position: relative;
+  aspect-ratio: 1 / 1; /* Esto hace que siempre sean cuadrados perfectos */
+  border-radius: 12px;
+  overflow: hidden;
+  display: block;
+}
+
+.instagram-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* LA CAPA OSCURA QUE APARECE (OVERLAY) */
+.instagram-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(4, 36, 68, 0.6); /* Tu azul oscuro semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.instagram-icon {
+  color: white;
+  font-size: 3rem;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+/* ANIMACIONES AL PASAR EL MOUSE */
+.instagram-post:hover .instagram-img {
+  transform: scale(1.05); /* La foto se acerca un poquito */
+}
+
+.instagram-post:hover .instagram-overlay {
+  opacity: 1; /* Aparece la capa oscura */
+}
+
+.instagram-post:hover .instagram-icon {
+  transform: translateY(0); /* El ícono sube a su posición */
+}
+
+@media (max-width: 768px) {
+  .instagram-grid {
+    grid-template-columns: 1fr; /* En celular se pone una debajo de otra */
+  }
+  .instagram-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,207 @@
+/* =========================================
+   PÁGINA DE CONTACTO (Estilo Institucional)
+   ========================================= */
+.contacto-page {
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  padding-bottom: 80px;
+}
+
+/* --- HERO BANNER --- */
+.contacto-hero {
+  position: relative;
+  height: 350px;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 80px; /* Ajusta según la altura de tu Navbar */
+}
+
+.contacto-hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contacto-hero-overlay {
+  position: absolute;
+  bottom: 40px;
+  left: 5%;
+  background: rgba(0, 0, 0, 0.4); /* Un fondo semitransparente sutil */
+  padding: 10px 30px;
+  border-radius: 8px;
+}
+
+.contacto-hero-overlay h1 {
+  color: white;
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+/* --- SECCIÓN PRINCIPAL (GRID 2 COLUMNAS) --- */
+.contacto-main-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 5%;
+}
+
+/* Info Izquierda */
+.contacto-info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 20px;
+}
+
+.info-item h3 {
+  font-size: 1.4rem;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.info-item p {
+  color: #555;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Formulario Derecha (Tarjeta gris claro) */
+.contacto-form-card {
+  background-color: #f4f5f7; /* El gris claro de la referencia */
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+.contacto-form-card h2 {
+  text-align: center;
+  color: #084b83;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.form-subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.contacto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.contacto-form input[type="text"],
+.contacto-form input[type="email"] {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s;
+}
+
+.contacto-form input:focus {
+  outline: none;
+  border-color: #084b83;
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.btn-submit {
+  background-color: transparent;
+  color: #333;
+  border: 1px solid #333;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 15px;
+  align-self: center; /* Centra el botón */
+  transition: all 0.3s;
+}
+
+.btn-submit:hover:not(:disabled) {
+  background-color: #084b83;
+  color: white;
+  border-color: #084b83;
+}
+
+.btn-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mensaje-exito {
+  background-color: #d1fae5;
+  color: #065f46;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* --- SECCIÓN MAPA --- */
+.contacto-mapa-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.contacto-mapa-section h2 {
+  font-size: 2rem;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.mapa-container {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+  .contacto-main-container {
+    grid-template-columns: 1fr; /* Pasa a 1 columna */
+    gap: 40px;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

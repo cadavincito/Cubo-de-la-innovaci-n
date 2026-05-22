@@ -1,0 +1,40 @@
+/* =========================================
+   CABECERA (Título, Descripción y Botón)
+   ========================================= */
+.ofertas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; /* Alinea el botón con la base del texto */
+  margin-bottom: 40px;
+}
+
+.ofertas-title-group {
+  max-width: 65%; /* Evita que el texto choque con el botón */
+}
+
+.ofertas-main-title {
+  font-size: 2.5rem;
+  font-weight: 700; /* ¡AQUÍ ESTÁ LA NEGRILLA! */
+  color: #333;
+  margin-bottom: 8px; /* Espacio entre título y descripción */
+}
+
+.ofertas-description {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.btn-ver-todas {
+  background-color: var(--color-secondary, #0b6cb5);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+  white-space: nowrap; /* Evita que el botón se parta en dos líneas */
+}
+
+.btn-ver-todas:hover {
+  opacity: 0.9;
+}

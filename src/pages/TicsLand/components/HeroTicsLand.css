@@ -1,0 +1,113 @@
+/* =========================================
+   HERO TIC-LAND - ALTO IMPACTO
+   ========================================= */
+
+:root {
+  --tics-green-dark: #007A3B; /* Verde profundo para contrastes */
+  --tics-green-main: #00A651; /* Verde corporativo vibrante */
+  --tics-green-accent: #33FF8A; /* Un verde más claro para toques de luz */
+}
+
+.hero-land-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 90px); /* Ocupa la pantalla completa restando el navbar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--tics-green-dark); /* Color de respaldo */
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* 1. LA IMAGEN DE FONDO (Con animación sutil de zoom/movimiento) */
+.hero-land-bg-image {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  /* 👈👇 Reemplaza esta ruta por la ruta real de tu imagen guardada 👇👉 */ 
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  opacity: 0.6; /* Un poco transparente para fusionar */
+  /* Animación Ken Burns sutil (zoom lento) */
+  animation: bgSubtleMovement 20s ease-in-out infinite alternate;
+}
+
+/* 2. OVERLAYS DE FUSIÓN (Gradientes verdes) */
+.hero-land-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 2;
+}
+
+/* Gradiente vertical: asegura contraste del texto */
+.gradient-v {
+  background: linear-gradient(to bottom, 
+              rgba(0, 122, 59, 0.4) 0%, 
+              rgba(0, 50, 91, 0.5) 100%); /* Fusiona con un poco del azul institucional abajo */
+}
+
+/* Gradiente radial: genera el "degrade" inmersivo */
+.gradient-radial {
+  background: radial-gradient(circle, 
+              rgba(0, 166, 81, 0.2) 0%, 
+              var(--tics-green-dark) 80%);
+}
+
+/* 3. CONTENEDOR DE CONTENIDO */
+.hero-land-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 0 5%;
+}
+
+/* 4. TIPOGRAFÍA PREMIUM */
+.hero-land-title {
+  font-size: clamp(4rem, 10vw, 8rem); /* Gigante y responsivo */
+  font-weight: 900;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: 2px;
+  /* Sombra difuminada para que el texto salte */
+  text-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  
+  /* Efecto sutil de trazo para que "grite" tecnología sin lines raras */
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1); 
+}
+
+/* 5. ANIMACIONES SUTILES */
+
+/* Animación del texto al entrar */
+.animate-reveal-land {
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+  animation: revealUpScale 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* KEYFRAMES */
+
+/* Revelado con un toque de escala */
+@keyframes revealUpScale {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Movimiento sutil de fondo (Ken Burns effect) */
+@keyframes bgSubtleMovement {
+  0% { transform: scale(1) translateY(0); }
+  100% { transform: scale(1.05) translateY(-20px); } /* Zoom lento y subida suave */
+}
+
+/* 6. RESPONSIVE */
+@media (max-width: 992px) {
+  .hero-land-title { font-size: 5rem; letter-spacing: -2px; }
+  .hero-land-wrapper { min-height: 70vh; }
+}
+
+@media (max-width: 576px) {
+  .hero-land-title { font-size: 3.5rem; letter-spacing: -1px; }
+}

@@ -1,0 +1,191 @@
+/* =========================================
+   SECCIÓN PROGRAMAS ESTRATÉGICOS
+   ========================================= */
+.rinnova-programas-section {
+  padding: 100px 5%;
+  background-color: #FAFAF7; /* Fondo muy sutil casi blanco */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.rinnova-programas-header {
+  text-align: center;
+  max-width: 800px;
+  /* Reduje el margen inferior porque ya no hay texto descriptivo */
+  margin: 0 auto 30px auto; 
+}
+
+.rinnova-title-dark {
+  color: #000000;
+  font-size: 3.5rem; 
+  font-weight: 900;
+  margin-bottom: 0; /* Sin margen porque ya no hay párrafo debajo */
+  line-height: 1.1;
+}
+
+/* 👇 CAMBIO DE COLOR: Ahora usa el azul oscuro que viene de arriba 👇 */
+.title-highlight {
+  color: #0E5681; 
+}
+
+/* =========================================
+   ACORDEÓN (INTERACCIÓN)
+   ========================================= */
+.rinnova-accordion {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  height: 480px; 
+  margin: 0 auto;
+  gap: 0; 
+  /* 👇 REDONDEZ AL CONTENEDOR PRINCIPAL 👇 */
+  border-radius: 20px;
+  overflow: hidden; /* Asegura que los bordes redondeados se respeten */
+}
+
+.rinnova-acc-card {
+  position: relative;
+  flex: 1; 
+  /* 👇 REDONDEZ A LAS TARJETAS (Opcional, pero ayuda en la transición) 👇 */
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+}
+
+/* Al pasar el mouse, esta tarjeta crece */
+.rinnova-acc-card:hover {
+  flex: 2.5; 
+}
+
+/* =========================================
+   FONDOS DE LAS TARJETAS (Extraídos del PDF)
+   ========================================= */
+.bg-pdf-govtech { background-color: #F8F3E6; }
+.bg-pdf-empresarial { background-color: #0E5681; }
+.bg-pdf-academica { background-color: #7FB1D3; }
+
+/* =========================================
+   CONTENIDO DE LA TARJETA
+   ========================================= */
+.rinnova-acc-content {
+  position: relative;
+  z-index: 2;
+  padding: 40px;
+  width: 100%;
+  text-align: center; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.rinnova-acc-title {
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin: 0;
+  white-space: normal; 
+  line-height: 1.1;
+  transition: transform 0.5s ease;
+}
+
+/* Colores de tipografía específicos */
+.text-black { color: #000000; }
+.text-white { color: #ffffff; }
+.text-blue-gov { color: #0E5681; }
+
+/* =========================================
+   INFORMACIÓN OCULTA (Se revela al hacer Hover)
+   ========================================= */
+.rinnova-acc-hidden {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rinnova-acc-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  min-width: 250px; 
+  max-width: 400px;
+  text-align: justify; 
+  margin-bottom: 25px; 
+}
+
+/* Colores de descripción para dar buen contraste */
+.text-dark-gray { color: #333333; }
+.text-light-gray { color: #e2e8f0; }
+
+/* Estilos para los botones */
+.rinnova-acc-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.rinnova-acc-btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn-blue {
+  background-color: #0E5681;
+  color: white;
+}
+.btn-blue:hover { background-color: #000000; color: white; }
+
+.btn-white {
+  background-color: #ffffff;
+  color: #0E5681;
+}
+.btn-white:hover { background-color: #e2e8f0; }
+
+/* Animación de revelado */
+.rinnova-acc-card:hover .rinnova-acc-hidden {
+  max-height: 350px; 
+  opacity: 1;
+  margin-top: 25px;
+}
+
+.rinnova-acc-card:hover .rinnova-acc-title {
+    transform: translateY(-10px);
+}
+
+/* =========================================
+   RESPONSIVE (Móviles)
+   ========================================= */
+@media (max-width: 768px) {
+  .rinnova-title-dark { font-size: 2.5rem; }
+  .rinnova-accordion {
+    flex-direction: column; 
+    height: auto;
+  }
+  .rinnova-acc-card {
+    height: 180px;
+    border-radius: 0; /* En móvil, mejor sin bordes redondeados internos si están apiladas */
+  }
+  .rinnova-acc-card:first-child {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .rinnova-acc-card:last-child {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .rinnova-acc-card:hover {
+    flex: none;
+    height: auto; 
+    padding-bottom: 30px;
+  }
+}

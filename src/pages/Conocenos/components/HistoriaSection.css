@@ -1,0 +1,79 @@
+.historia-section {
+  padding: 100px 0;
+  background-color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.historia-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 50% y 50% */
+  gap: 60px;
+  align-items: center;
+}
+
+.historia-tag {
+  color: #3a7bd5;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.historia-subtitle {
+  font-size: 2.5rem;
+  color: #042444;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.historia-description {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* ESTILOS DE LA IMAGEN */
+.historia-image-wrapper {
+  position: relative;
+}
+
+.historia-img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  position: relative;
+  z-index: 2;
+}
+
+/* Decoración geométrica detrás de la foto */
+.historia-img-decoration {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  background-color: #3a7bd5;
+  border-radius: 15px;
+  z-index: 1;
+  opacity: 0.2;
+}
+
+/* RESPONSIVE: En celular se pone una cosa sobre la otra */
+@media (max-width: 992px) {
+  .historia-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .historia-img {
+    height: 300px;
+  }
+  .historia-img-decoration { display: none; }
+}

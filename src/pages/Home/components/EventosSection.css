@@ -1,0 +1,285 @@
+/* =========================================
+   CONTENEDOR PRINCIPAL
+   ========================================= */
+.ofertas-eventos-section {
+  padding: 80px 5%;
+  background-color: #fcfcfc; /* Un gris casi blanco súper elegante */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.ofertas-eventos-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   CABECERA Y PESTAÑAS (TABS)
+   ========================================= */
+.oe-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.oe-title-group {
+  max-width: 50%;
+}
+
+.oe-main-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.oe-description {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.oe-tabs-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.oe-tab-btn {
+  background-color: transparent;
+  border: 2px solid #ddd;
+  color: #777;
+  padding: 10px 24px;
+  border-radius: 30px; /* Bordes redondeados tipo píldora */
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.oe-tab-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.oe-tab-btn.active {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
+}
+
+.oe-link-all {
+  color: var(--color-secondary);
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 15px;
+  transition: opacity 0.3s;
+}
+
+.oe-link-all:hover {
+  opacity: 0.7;
+}
+
+/* =========================================
+   CARRUSEL
+   ========================================= */
+.oe-carousel-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 15px;
+  width: 100%;
+}
+
+.oe-scroll-container {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  padding: 15px 5px;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.oe-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.oe-card-wrapper {
+  flex: 0 0 calc(33.333% - 20px);
+  min-width: 320px;
+}
+
+/* FLECHAS DEL CARRUSEL */
+.carousel-arrow {
+  background-color: #d1d8e0;
+  color: white;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.carousel-arrow:hover {
+  background-color: var(--color-primary);
+}
+
+/* =========================================
+   DISEÑO UNIFICADO DE TARJETAS (OFERTAS Y EVENTOS)
+   ========================================= */
+.uni-card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+  border: 1px solid #f0f0f0;
+  height: 100%;
+  min-height: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.uni-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Área de la imagen */
+.uni-card-image {
+  position: relative;
+  height: 190px;
+  background-color: #f0f4f8; /* Gris azulado suave temporal para la foto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uni-card-logo-placeholder {
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--color-primary);
+  opacity: 0.1;
+}
+
+/* La Franja Azul Inferior (Color principal por defecto para Ofertas) */
+.uni-card-banner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-secondary, #0b6cb5); 
+  color: white;
+  text-align: center;
+  padding: 10px 10px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Contenido de la tarjeta */
+.uni-card-content {
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; 
+  text-align: left; /* Asegura que TODO esté alineado a la izquierda */
+}
+
+.uni-card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.uni-card-desc {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  flex-grow: 1; 
+}
+
+/* Da un pequeño respiro entre la fecha, hora y lugar de los eventos */
+.uni-card-desc p {
+  margin-bottom: 6px;
+}
+
+/* Footer de la tarjeta (Fechas y botón) */
+.uni-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 15px;
+  margin-top: auto; /* Empuja el footer siempre hacia abajo */
+}
+
+.uni-card-footer-text {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.uni-card-footer-text strong {
+  color: #333;
+}
+
+.uni-card-link {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.uni-card-link:hover {
+  color: var(--color-secondary);
+}
+
+/* =========================================
+   ESTILOS ESPECÍFICOS PARA TARJETA DE EVENTOS
+   ========================================= */
+
+/* Un SEGUNDO AZUL corporativo distinto al principal de ofertas */
+.evento-banner {
+  background-color: #4a8deb; /* Azul acero que pediste */
+  color: white; 
+}
+
+/* =========================================
+   ESTILOS ESPECÍFICOS PARA TARJETA DE EVENTOS
+   ========================================= */
+
+/* 1. EL NUEVO AZUL (Forzando el cambio) */
+.evento-banner {
+  background-color: #4a8deb !important; /* Azul acero corporativo */
+  color: white !important; 
+}
+
+/* 2. CENTRADO DE LA INFORMACIÓN */
+.evento-content-centered {
+  text-align: center !important;
+}
+
+.evento-content-centered .uni-card-desc p {
+  margin-bottom: 6px;
+}
+
+.evento-content-centered .uni-card-footer {
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}

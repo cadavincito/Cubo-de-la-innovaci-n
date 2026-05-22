@@ -1,0 +1,166 @@
+/* =========================================
+   SECCIÓN PROPÓSITO (DISEÑO PROFESIONAL Y TECNOLÓGICO)
+   ========================================= */
+.proposito-section {
+  width: 100%;
+  padding: 60px 5%; /* Mantenemos el padding reducido */
+  /* CAMBIO 1: Un gris muy sutil para limpieza profesional, sin textura visible */
+  background-color: #fdfdff; 
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  overflow: hidden; /* Evita que los neones se salgan */
+}
+
+.proposito-container {
+  max-width: 1100px; /* Mantenemos el ancho contenido */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px; 
+  z-index: 10;
+  position: relative;
+}
+
+/* =========================================
+   COLUMNA IZQUIERDA (Textos)
+   ========================================= */
+.proposito-text-column {
+  flex: 1.2;
+  text-align: left;
+}
+
+.proposito-etiqueta {
+  font-size: 1rem;
+  font-weight: 700;
+  /* CAMBIO 2: Azul vibrante para la etiqueta, profesional e intenso */
+  color: #0b6cb5; 
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.proposito-title {
+  font-size: 2.2rem; /* Mantenemos el tamaño reducido */
+  font-weight: 800;
+  /* CAMBIO 3: Título en un morado oscuro corporativo e intenso */
+  color: #4a148c; /* Un morado oscuro que se ve muy profesional */
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.highlight-tech {
+  /* CAMBIO 4: Mantenemos el cyan brillante para resaltar palabras clave tecnológicas */
+  color: #00d2ff; /* El cyan vibrante que aporta luz y tecnología */
+  text-shadow: 0 0 10px rgba(0, 210, 255, 0.6); /* Sutil resplandor detrás de TECH */
+}
+
+/* Textos justificados y legibles */
+.proposito-description p {
+  font-size: 1.05rem; 
+  color: #333333; /* Gris carbón para lectura muy cómoda y profesional */
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: justify; /* Justificado perfecto */
+}
+
+/* =========================================
+   COLUMNA DERECHA (Imagen Rionegro)
+   ========================================= */
+.proposito-image-column {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Contenedor del panel de la imagen */
+.hub-glass-image-panel {
+  position: relative;
+  width: 100%;
+  /* 1. Subimos el max-width de 450px a 550px para que pueda crecer más a los lados */
+  max-width: 550px; 
+  /* 2. Cambiamos la proporción. En vez de 4/3, usamos una proporción libre
+        o la amarramos a la altura total del contenedor para que sea más alta.
+        Quita el 'aspect-ratio: 4/3;' y ponle un 'min-height'. */
+  min-height: 450px; 
+  background: rgba(255, 255, 255, 0.05); 
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* La imagen real de Rionegro */
+.rionegro-photo {
+  width: 100%;
+  height: 100%;
+  /* 3. ¡EL TRUCO MAGNÍFICO! object-fit: cover asegura que la foto llene 
+        todo el nuevo espacio disponible sin deformarse. Recortará un poquitito
+        los bordes si es necesario, pero mantendrá la proporción perfecta. */
+  object-fit: cover; 
+  z-index: 2;
+  position: absolute; /* Cambiamos a absolute para que llene el contenedor */
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+}
+
+/* =========================================
+   LUCES NEÓN DIFUSAS (AURORA TECH) - Agregan impacto sutil
+   ========================================= */
+.proposito-section::before,
+.proposito-section::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px); /* Neón suave */
+  opacity: 0.2;
+  z-index: 1;
+}
+
+/* Luz 1: Morado/Púrpura Vibrante */
+.proposito-section::before {
+  width: 300px;
+  height: 300px;
+  background-color: #6d28d9; 
+  bottom: -100px;
+  right: -50px;
+}
+
+/* Luz 2: Azul/Cian (Smart Cities vibe) */
+.proposito-section::after {
+  width: 250px;
+  height: 250px;
+  background-color: #00d2ff;
+  bottom: 0px;
+  right: 150px;
+}
+
+/* =========================================
+   RESPONSIVE (Celulares)
+   ========================================= */
+@media (max-width: 992px) {
+  .proposito-container {
+    flex-direction: column; 
+    gap: 30px;
+  }
+  .proposito-text-column {
+    text-align: center; /* Centramos el título en móviles */
+  }
+  .proposito-description p {
+    text-align: justify; /* Mantenemos el justificado en móviles */
+  }
+  .proposito-image-column {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .proposito-title {
+    font-size: 1.8rem;
+  }
+}

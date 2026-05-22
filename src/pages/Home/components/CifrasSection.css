@@ -1,0 +1,57 @@
+/* =========================================
+   SECCIÓN DE CIFRAS (FONDO OSCURO)
+   ========================================= */
+.cifras-section {
+  background-color: #042444; 
+  padding: 70px 0;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+.cifras-container {
+  display: flex;
+  justify-content: center; /* ÚNICO CAMBIO: Mantiene las 3 tarjetas en el centro de la pantalla */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+  flex-wrap: wrap; 
+  gap: 40px;
+}
+
+.cifra-box {
+  text-align: center; /* Vuelve a tu diseño original */
+  flex: 1;
+  min-width: 250px;
+  padding: 2px; /* Vuelve al tamaño original, más compacto */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.cifra-box:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.cifra-numero {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #3275b0; 
+  margin-bottom: 15px;
+  line-height: 1;
+}
+
+.cifra-texto {
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 768px) {
+  .cifra-numero { font-size: 3rem; }
+  .cifra-box { padding: 15px; }
+}

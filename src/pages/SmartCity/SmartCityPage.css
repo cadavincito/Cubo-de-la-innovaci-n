@@ -1,0 +1,16 @@
+/* Contenedor de la página */
+.iframe-page-container {
+  width: 100%;
+  /* Cambiamos 'height' por 'min-height' */
+  min-height: calc(100vh - 110px); 
+  display: flex;
+  background-color: #f4f6f9;
+}
+
+/* El iframe en sí */
+.smartcity-iframe {
+  width: 100%;
+  /* Le damos una buena altura fija a la "ventana" para que la app respire */
+  height: calc(100vh - 110px); 
+  border: none;
+}

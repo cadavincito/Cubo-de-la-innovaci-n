@@ -1,0 +1,100 @@
+.ofertas-carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* El "tren" que contiene las tarjetas */
+.ofertas-scroll-container {
+  display: flex;
+  justify-content: flex-start; /* IMPORTANTE: Volvemos a flex-start para no esconder la primera tarjeta */
+  gap: 30px; 
+  overflow-x: hidden; /* Ocultamos el scroll nativo, para eso están las flechas */
+  scroll-behavior: smooth; 
+  padding: 20px; 
+  width: 100%;
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+}
+
+.ofertas-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================================
+   LA MAGIA: TAMAÑO DE LAS TARJETAS
+   ========================================= */
+/* Evita que las tarjetas se encojan y obliga a mostrar exactamente 3 */
+.ofertas-scroll-container > div {
+  /* Matemáticas: 100% de pantalla - (2 espacios de 30px) dividido entre 3 */
+  flex: 0 0 calc((100% - 60px) / 3); 
+}
+
+
+/* =========================================
+   FLECHAS DEL CARRUSEL
+   ========================================= */
+.carousel-arrow {
+  background-color: #ffffff;
+  color: #084b83;
+  border: 1px solid #eaeaea;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  position: absolute;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.carousel-arrow:hover {
+  background-color: #084b83;
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+/* Posición de las flechas (las saca un poquito del borde para que no tapen las tarjetas) */
+.left-arrow {
+  left: -20px;
+}
+
+.right-arrow {
+  right: -20px;
+}
+
+
+/* =========================================
+   RESPONSIVE (Adaptación a pantallas)
+   ========================================= */
+
+/* Tablets: Mostrar 2 tarjetas */
+@media (max-width: 992px) {
+  .ofertas-scroll-container > div {
+    /* 100% - 1 espacio de 30px dividido en 2 */
+    flex: 0 0 calc((100% - 30px) / 2); 
+  }
+}
+
+/* Celulares: Mostrar 1 tarjeta */
+@media (max-width: 768px) {
+  .ofertas-scroll-container > div {
+    flex: 0 0 100%; /* Ocupa todo el ancho */
+  }
+  
+  .ofertas-scroll-container {
+    overflow-x: auto; /* Devolvemos el scroll táctil para deslizar con el dedo */
+  }
+
+  .left-arrow, .right-arrow {
+    display: none; /* Ocultamos los botones en celular */
+  }
+}

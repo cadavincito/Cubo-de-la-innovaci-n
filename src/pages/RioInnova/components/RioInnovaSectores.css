@@ -1,0 +1,146 @@
+/* =========================================
+   SECCIÓN SECTORES ESTRATÉGICOS RIO-INNOVA
+   ========================================= */
+.rinnova-sectores-section {
+  padding: 100px 5%;
+  background-color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Asegura el centrado horizontal de toda la sección */
+  overflow: hidden;
+}
+
+.rinnova-sectores-header {
+  text-align: center;
+  margin-bottom: 80px;
+  width: 100%;
+}
+
+/* Sincronización de títulos: Tamaño imponente y color del PDF */
+.rinnova-title-sync {
+  color: #000000;
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 0;
+}
+
+/* Azul oscuro institucional para la palabra resaltada */
+.title-highlight-sync {
+  color: #0E5681;
+}
+
+/* =========================================
+   CONTENEDOR DE NODOS (Sincronizado al Centro)
+   ========================================= */
+.rinnova-nodes-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.rinnova-nodes-grid {
+  display: flex;
+  justify-content: center; /* Centra los hexágonos en el eje horizontal */
+  align-items: center;
+  gap: 50px; /* Espacio equilibrado entre sectores */
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* =========================================
+   HEXÁGONO OPTIMIZADO (UX & CONTRASTE)
+   ========================================= */
+.rinnova-node-hex {
+  position: relative;
+  width: 280px;
+  height: 320px;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Sombra externa tipo resplandor para dar profundidad sin cortes de layout */
+  filter: drop-shadow(0 15px 25px rgba(0, 34, 68, 0.15));
+}
+
+.hex-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  /* Forma geométrica según diseño de laboratorio */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: background-color 0.4s ease;
+  border: 1px solid #f1f5f9;
+}
+
+/* =========================================
+   INTERACCIONES (HOVER)
+   ========================================= */
+.rinnova-node-hex:hover {
+  transform: translateY(-15px);
+  /* El resplandor cambia al color del sector en hover */
+  filter: drop-shadow(0 25px 40px rgba(18, 130, 195, 0.3));
+}
+
+.rinnova-node-hex:hover .hex-inner {
+  background-color: var(--accent-color);
+}
+
+.hex-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 30px;
+}
+
+.hex-icon {
+  font-size: 3.5rem;
+  display: block;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.hex-title {
+  color: #002244;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.3;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0 15px;
+  transition: color 0.3s ease;
+}
+
+/* Cambio a blanco para legibilidad sobre fondo de color */
+.rinnova-node-hex:hover .hex-title,
+.rinnova-node-hex:hover .hex-icon {
+  color: #ffffff;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 768px) {
+  .rinnova-title-sync { 
+    font-size: 2.5rem; 
+  }
+  .rinnova-nodes-grid { 
+    gap: 30px; 
+    flex-direction: column; /* Apilado vertical para mejor lectura en móvil */
+  }
+  .rinnova-node-hex { 
+    width: 240px; 
+    height: 280px; 
+  }
+}

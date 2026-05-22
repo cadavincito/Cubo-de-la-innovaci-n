@@ -1,0 +1,128 @@
+/* =========================================
+   PÁGINA: ESPACIOS (ACORDEÓN MINIMALISTA AZUL)
+   ========================================= */
+
+.espacios-page-wrapper {
+  position: relative;
+  width: 100%;
+  height: 70vh; /* Banner más pequeño, no ocupa el 100% de la pantalla */
+  min-height: 500px;
+  max-height: 700px;
+  background-color: #084b83; /* Base azul institucional */
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.espacios-accordion-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.espacio-panel {
+  flex: 1; 
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1); 
+}
+
+/* Overlay azul elegante para la fotografía */
+.espacio-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(to top, rgba(8, 75, 131, 0.95) 0%, rgba(8, 75, 131, 0.3) 100%);
+  transition: background 0.6s ease;
+  z-index: 1;
+}
+
+.espacio-content {
+  position: absolute;
+  bottom: 50px;
+  left: 40px;
+  right: 40px;
+  z-index: 3;
+  color: #ffffff;
+}
+
+.espacio-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.1;
+  transition: transform 0.4s ease;
+}
+
+.espacio-hidden-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  margin-top: 15px;
+}
+
+.espacio-desc {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 20px;
+}
+
+/* Botón con contraste para resaltar sobre el fondo azul */
+.espacio-btn {
+  display: inline-block;
+  background-color: #ffffff; 
+  color: #084b83;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* =========================================
+   EFECTOS HOVER (INTERACTIVIDAD)
+   ========================================= */
+.espacio-panel:hover {
+  flex: 1.4; 
+}
+
+.espacio-panel:hover .espacio-overlay {
+  /* Se hace más transparente arriba para ver mejor la foto al hacer hover */
+  background: linear-gradient(to top, rgba(8, 75, 131, 0.95) 0%, rgba(8, 75, 131, 0.1) 100%);
+}
+
+.espacio-panel:hover .espacio-title {
+  transform: translateY(-5px);
+}
+
+.espacio-panel:hover .espacio-hidden-content {
+  max-height: 200px; 
+  opacity: 1;
+}
+
+.espacio-btn:hover {
+  background-color: #e6f0f9; /* Un tono de azul muy claro para el hover */
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   RESPONSIVE (TABLETS Y MÓVILES)
+   ========================================= */
+@media (max-width: 1024px) {
+  .espacio-title { font-size: 1.8rem; }
+  .espacio-content { left: 20px; right: 20px; bottom: 30px; }
+}
+
+@media (max-width: 768px) {
+  .espacios-page-wrapper { height: auto; min-height: 80vh; max-height: none; }
+  .espacios-accordion-container { flex-direction: column; height: 80vh; }
+  .espacio-panel { flex: 1; min-height: 33.33vh; }
+  .espacio-panel:hover { flex: 1.5; }
+  .espacio-hidden-content { max-height: 200px; opacity: 1; }
+}

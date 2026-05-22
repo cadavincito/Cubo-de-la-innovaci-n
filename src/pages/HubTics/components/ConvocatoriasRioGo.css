@@ -1,0 +1,131 @@
+/* =========================================
+   NUEVO ESTILO CONVOCATORIAS RIO-GO (Limpio + Glassmorphism)
+   ========================================= */
+.riogo-section-new {
+  position: relative;
+  background-color: #f8fafc; /* Fondo limpio y claro */
+  padding: 120px 5%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* =========================================
+   LUCES DE FONDO (Sutiles y difusas)
+   ========================================= */
+.riogo-glow-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.glow-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.3; /* Sutil */
+}
+
+.cyan-glow {
+  width: 300px;
+  height: 300px;
+  background-color: #00d2ff; /* Cyan del sitio */
+  top: 10%;
+  right: 15%;
+}
+
+.purple-glow {
+  width: 400px;
+  height: 400px;
+  background-color: #6d28d9; /* Morado del sitio */
+  bottom: 5%;
+  left: 10%;
+}
+
+/* =========================================
+   TARJETA DE CRISTAL (Glassmorphism)
+   ========================================= */
+.riogo-glass-card {
+  position: relative;
+  z-index: 10;
+  max-width: 900px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.6); /* Transparencia blanca */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Borde sutil */
+  padding: 80px 50px;
+  border-radius: 30px;
+  backdrop-filter: blur(15px); /* Efecto de desenfoque */
+  box-shadow: 0 20px 50px rgba(0, 34, 68, 0.08); /* Sombra suave */
+  text-align: center;
+}
+
+.riogo-label-new {
+  color: #002244; /* Azul oscuro institucional */
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* =========================================
+   CONTENEDOR DEL LOGO (Reemplaza al título)
+   ========================================= */
+.riogo-logo-wrapper {
+  max-width: 400px; /* Tamaño máximo del logo */
+  margin: 0 auto 40px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.riogo-logo-new {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Asegura que el logo no se deforme */
+}
+
+.riogo-description-new {
+  color: #4a5568; /* Gris oscuro para buena lectura */
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 50px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================================
+   BOTÓN DE LLAMADO A LA ACCIÓN
+   ========================================= */
+.riogo-btn-new {
+  display: inline-block;
+  background: linear-gradient(90deg, #6d28d9 0%, #a855f7 100%); /* Degradado morado */
+  color: white;
+  padding: 18px 50px;
+  border-radius: 50px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(109, 40, 217, 0.3);
+}
+
+.riogo-btn-new:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(109, 40, 217, 0.5);
+  filter: brightness(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .riogo-glass-card { padding: 50px 20px; }
+  .riogo-label-new { font-size: 0.85rem; letter-spacing: 2px; }
+  .riogo-logo-wrapper { max-width: 300px; }
+  .riogo-description-new { font-size: 1.05rem; }
+}

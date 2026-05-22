@@ -1,0 +1,81 @@
+/* =========================================
+   BANNER FRASE - DISEÑO ELEGANTE Y CORREGIDO
+   ========================================= */
+.frase-banner-dynamic {
+  position: relative;
+  width: 100%;
+  min-height: 60vh; /* Redujimos la altura para que no ocupe toda la pantalla */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #042444; 
+  overflow: hidden; 
+  padding: 60px 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* LA ANIMACIÓN DE FONDO CONTINUA (Partículas) */
+.frase-animation-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; 
+  opacity: 0.7; /* Suavizamos un poco más las partículas */
+}
+
+/* =========================================
+   CUADRO DE TEXTO (EFECTO CRISTAL COMPACTO)
+   ========================================= */
+.frase-content-frame {
+  position: relative;
+  z-index: 2; 
+  background: rgba(255, 255, 255, 0.05); /* Cristal sutil */
+  backdrop-filter: blur(20px); 
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Borde un poco más definido */
+  
+  /* AJUSTES PARA HACERLO MÁS ELEGANTE */
+  padding: 60px 50px; 
+  border-radius: 30px; 
+  max-width: 850px; /* Contenedor más angosto para agrupar mejor el texto */
+  
+  text-align: center; /* Aseguramos el centrado */
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease;
+}
+
+/* Efecto hover suave */
+.frase-content-frame:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* =========================================
+   TIPOGRAFÍA (LO QUE PEDISTE: Pequeña, Normal, Seminegrita)
+   ========================================= */
+.frase-texto-hero {
+  font-size: 2.2rem; /* Tamaño MUCHO más manejable y armónico */
+  font-style: normal; /* SIN cursiva (eliminamos la cursiva fea) */
+  font-weight: 600; /* SEMINEGRITA */
+  line-height: 1.6; /* Interlineado perfecto para lectura */
+  color: #ffffff;
+  margin-bottom: 25px;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.frase-autor-bold {
+  font-weight: 800; 
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.95rem;
+  color: #00d2ff; /* Le damos un toque cian al autor para que contraste lindo */
+}
+
+/* RESPONSIVE (Móviles) */
+@media (max-width: 768px) {
+  .frase-texto-hero { font-size: 1.6rem; }
+  .frase-content-frame { padding: 40px 25px; border-radius: 20px; }
+}

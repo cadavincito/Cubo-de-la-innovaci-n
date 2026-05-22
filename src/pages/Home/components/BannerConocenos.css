@@ -1,0 +1,171 @@
+/* =========================================
+   BANNER CONÓCENOS (HOME SECTION)
+   ========================================= */
+.banner-conocenos {
+  position: relative;
+  width: 100%;
+  /* LA MAGIA: 100vh hace que el fondo cubra la pantalla completa de alto */
+  min-height: 100vh; 
+  background: radial-gradient(circle at 10% 50%, #001f5c 0%, #000a29 70%);
+  color: white;
+  overflow: hidden;
+  padding: 100px 0; 
+  display: flex;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+}
+
+.banner-conocenos-bg-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.4;
+  background-image: 
+    repeating-linear-gradient(rgba(74, 141, 235, 0.05) 0 1px, transparent 1px 10px),
+    repeating-linear-gradient(90deg, rgba(74, 141, 235, 0.05) 0 1px, transparent 1px 10px);
+}
+
+.banner-conocenos-bg-effect::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(1px 1px at 20% 30%, #4a8deb 100%, transparent),
+    radial-gradient(2px 2px at 80% 80%, #4a8deb 100%, transparent),
+    radial-gradient(1px 1px at 40% 60%, #4a8deb 100%, transparent),
+    radial-gradient(1px 1px at 60% 10%, #0b6cb5 100%, transparent);
+  background-size: 40% 40%;
+  background-repeat: repeat;
+  opacity: 0.8;
+}
+
+/* =========================================
+   CONTENEDOR DE DOS COLUMNAS
+   ========================================= */
+.banner-conocenos-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+  position: relative;
+  z-index: 2;
+  /* Activamos Flexbox para poner texto y logo lado a lado */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* Columna de Texto */
+.banner-conocenos-content-area {
+  flex: 1; /* Toma el espacio disponible */
+  max-width: 600px; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 15px;
+}
+
+/* Columna del Logo */
+.banner-conocenos-logo-area {
+  flex: 0 0 350px; /* Ancho fijo para el logo */
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ESTILOS DEL LOGO */
+.banner-cubo-logo {
+  width: 100%;
+  max-width: 400px; /* Lo hice un poco más grande para que impacte más */
+  height: auto;
+  opacity: 0.9;
+  /* Le agregamos un resplandor atrás para que destaque como neón */
+  filter: drop-shadow(0 0 20px rgba(74, 141, 235, 0.4));
+}
+
+/* =========================================
+   TEXTOS Y BOTÓN
+   ========================================= */
+.banner-conocenos-title {
+  font-size: 3.2rem; /* Texto un poco más grande */
+  font-weight: 700;
+  color: white;
+  line-height: 1.1;
+  margin-bottom: 5px;
+  text-shadow: 0 0 10px rgba(74, 141, 235, 0.4);
+}
+
+.banner-conocenos-title .highlight-blue {
+  color: #4a8deb;
+  font-weight: 700;
+  text-shadow: 0 0 15px rgba(74, 141, 235, 0.8), 0 0 30px rgba(74, 141, 235, 0.6);
+}
+
+.banner-conocenos-subtitle {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #d1d8e0;
+  margin-bottom: 10px;
+}
+
+.banner-conocenos-description {
+  font-size: 1.15rem;
+  color: #a4b0be;
+  line-height: 1.6;
+}
+
+.banner-conocenos-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 35px; /* Botón más robusto */
+  border: 2px solid rgba(74, 141, 235, 0.8);
+  border-radius: 4px;
+  color: #4a8deb;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  box-shadow: 0 0 10px rgba(74, 141, 235, 0.3);
+}
+
+.banner-conocenos-btn:hover {
+  background-color: #0b6cb5;
+  border-color: #0b6cb5;
+  color: white;
+  box-shadow: 0 0 15px rgba(74, 141, 235, 0.8);
+  transform: translateY(-2px);
+}
+
+/* Responsive para celulares */
+@media (max-width: 992px) {
+  .banner-conocenos-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  
+  .banner-conocenos-content-area {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .banner-conocenos-logo-area {
+    justify-content: center;
+  }
+  
+  .banner-cubo-logo {
+    max-width: 200px;
+  }
+
+  .banner-conocenos-title {
+    font-size: 2.5rem;
+  }
+}

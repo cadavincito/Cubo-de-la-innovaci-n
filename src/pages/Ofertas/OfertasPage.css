@@ -1,0 +1,190 @@
+/* =========================================
+   CONTENEDORES GENERALES
+   ========================================= */
+.ofertas-page-container {
+  padding: 120px 5% 80px; 
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* =========================================
+   CABECERA (TÍTULO PRINCIPAL) - DISEÑO PREMIUM
+   ========================================= */
+.ofertas-header {
+  text-align: center;
+  margin-bottom: 60px; 
+  position: relative;
+}
+
+.ofertas-header h1 {
+  background: linear-gradient(90deg, #084b83 0%, #4361ee 100%);
+  -webkit-background-clip: text;
+  background-clip: text; /* 👈 ¡ESTA ES LA LÍNEA NUEVA QUE TE PIDE VS CODE! */
+  -webkit-text-fill-color: transparent;
+  font-size: 3.5rem; 
+  font-weight: 900;
+  margin-bottom: 15px;
+  letter-spacing: -1.5px; 
+}
+
+.ofertas-header p {
+  color: #64748b; 
+  font-size: 1.2rem;
+  max-width: 600px; 
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Línea decorativa sutil debajo del texto */
+.ofertas-header::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #4361ee; 
+  margin: 25px auto 0;
+  border-radius: 4px;
+}
+
+/* LAYOUT PRINCIPAL: Sidebar + Grid */
+.ofertas-content-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr; 
+  gap: 50px; 
+  align-items: start; 
+}
+
+/* =========================================
+   SIDEBAR FILTROS: Diseño Premium UX/UI
+   ========================================= */
+.filters-sidebar {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04); 
+  border: 1px solid #f1f5f9; 
+  height: fit-content;
+  position: sticky;
+  top: 120px; 
+  min-width: 260px;
+}
+
+.filter-group {
+  margin-bottom: 35px;
+}
+
+.filter-group h3 {
+  font-size: 1.05rem;
+  color: #1e293b;
+  margin-bottom: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-direction: column; 
+  gap: 8px; 
+}
+
+.filter-buttons button {
+  width: 100%; 
+  text-align: left;
+  background: #f8fafc;
+  border: 1px solid transparent;
+  padding: 12px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.filter-buttons button:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+  transform: translateX(4px); 
+}
+
+.filter-buttons button.active {
+  background: #084b83;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(8, 75, 131, 0.25);
+}
+
+
+/* =========================================
+   CONTADOR DE RESULTADOS (El nuevo diseño "Píldora")
+   ========================================= */
+.results-count {
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #084b83; 
+  background-color: #f1f5f9; 
+  padding: 8px 18px;
+  border-radius: 20px; 
+  display: inline-block; 
+  border: 1px solid #e2e8f0;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+/* =========================================
+   GRILLA DE TARJETAS
+   ========================================= */
+.ofertas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px;
+  align-items: stretch; 
+}
+
+.no-results {
+  text-align: center;
+  padding: 50px;
+  grid-column: 1 / -1;
+  color: #999;
+  font-size: 1.1rem;
+}
+
+
+/* =========================================
+   RESPONSIVE (Adaptación a pantallas menores)
+   ========================================= */
+
+/* Tablets / Pantallas medianas (Mostrar 2 por fila) */
+@media (max-width: 1200px) {
+  .ofertas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Móviles y Tablets pequeñas (Filtros arriba, tarjetas abajo) */
+@media (max-width: 900px) {
+  .ofertas-content-layout {
+    grid-template-columns: 1fr; 
+    gap: 30px;
+  }
+  
+  .filters-sidebar {
+    position: static; 
+    min-width: 100%;
+  }
+
+  .filter-buttons {
+    flex-direction: row; 
+    flex-wrap: wrap;
+  }
+
+  .filter-buttons button {
+    width: auto; 
+  }
+
+  .ofertas-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}

@@ -1,0 +1,59 @@
+/* =========================================
+   ESTILOS DE LA SECCIÓN DE OFERTAS (HOME)
+   ========================================= */
+
+/* Contenedor principal: centra todo */
+.ofertas-section-container {
+  /* Antes era 80px, lo bajamos a 40px arriba y abajo */
+  padding: 40px 5%; 
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ofertas-section-header h2 {
+  color: #084b83; /* Mantenemos tu azul institucional */
+  font-size: 3rem; /* ¡Lo hacemos notablemente más grande! (antes estaba en 2rem) */
+  font-weight: 900; /* Lo hacemos súper negrito (extrabold) */
+  margin-bottom: 15px;
+  letter-spacing: -1px; /* Este pequeño truco de diseño lo hace ver más moderno y contundente */
+  line-height: 1.1; /* Evita que ocupe demasiado espacio hacia abajo si se parte en dos líneas */
+}
+
+/* Opcional: Si quieres que el parrafito gris de abajo también resalte un poquitico más para acompañar al nuevo súper título, cámbiale esto: */
+.ofertas-section-header p {
+  color: #555555; /* Un gris un poco más oscuro */
+  font-size: 1.15rem; /* Un pelín más grande */
+  line-height: 1.6;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.ofertas-section-footer {
+  /* Subimos el botón para que esté más cerca de las tarjetas */
+  margin-top: 25px; 
+}
+
+/* El botón azul bonito */
+.btn-ver-mas {
+  display: inline-block;
+  background-color: #4361ee; /* Azul vibrante */
+  color: #ffffff;
+  padding: 14px 36px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
+}
+
+/* Efecto al pasar el mouse por el botón */
+.btn-ver-mas:hover {
+  background-color: #084b83; /* Cambia al azul oscuro */
+  transform: translateY(-3px); /* Se levanta un poquito */
+  box-shadow: 0 6px 20px rgba(8, 75, 131, 0.4); /* Sombra más grande */
+  color: #ffffff;
+}
