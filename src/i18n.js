@@ -7,7 +7,9 @@ const resources = {
       "hero": {
         "subtitle": "El epicentro de Ciencia, Tecnología e Innovación para el oriente antioqueño.",
         "btn_conocenos": "CONÓCENOS",
-        "btn_espacios": "EXPLORAR ESPACIOS"
+        "btn_espacios": "EXPLORAR ESPACIOS",
+        "btn_empresario": "SOY EMPRESARIO",
+        "btn_emprendedor": "QUIERO EMPRENDER/SOY EMPRENDEDOR"
       },
       "ofertas_eventos": {
         "title": "Ofertas y eventos",
@@ -95,7 +97,9 @@ const resources = {
       "hero": {
         "subtitle": "The epicenter of Science, Technology, and Innovation for Eastern Antioquia.",
         "btn_conocenos": "ABOUT US",
-        "btn_espacios": "EXPLORE SPACES"
+        "btn_espacios": "EXPLORE SPACES",
+        "btn_empresario": "SOY EMPRESARIO",
+        "btn_emprendedor": "QUIERO EMPRENDER/SOY EMPRENDEDOR"
       },
       "ofertas_eventos": {
         "title": "Offers and Events",

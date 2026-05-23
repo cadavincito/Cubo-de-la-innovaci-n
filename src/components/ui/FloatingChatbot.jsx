@@ -4,7 +4,7 @@ import './FloatingChatbot.css';
 export default function FloatingChatbot() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { sender: 'bot', text: '¡Hola! 👋 Soy el asistente virtual del Cubo de la Innovación. ¿En qué te puedo ayudar hoy?' }
+    { sender: 'bot', text: '¡Hola! 👋 Soy Cubix el asistente virtual del Cubo de la Innovación. ¿En qué te puedo ayudar hoy?' }
   ]);
   const [inputValue, setInputValue] = useState('');
   const messagesEndRef = useRef(null);

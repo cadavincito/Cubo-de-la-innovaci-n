@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "title": "Servicios",
+    "path": "#",
+    "hasDropdown": true,
+    "subItems": [
+      { "title": "Tics Academy", "path": "/servicios/academy" },
+      { "title": "Rio Innova", "path": "/servicios/rioinnova" },
+      { "title": "Hub Tics", "path": "/servicios/hubtics" },
+      { "title": "Tics Land", "path": "/servicios/land" }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Ofertas",
+    "path": "/ofertas",
+    "hasDropdown": true,
+    "subItems": [
+      { "title": "Convocatorias", "path": "/ofertas/convocatorias" },
+      { "title": "Cursos y Retos", "path": "/ofertas/cursos" }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Espacios",
+    "path": "/espacios",
+    "hasDropdown": true,
+    "subItems": [
+      { "title": "Maker Space", "path": "/espacios/maker-space" },
+      { "title": "CoWorklab", "path": "/espacios/CoWorklab" },
+      { "title": "Cubo de la Innovación", "path": "/Cubo-de-la-Innovación" }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Contacto",
+    "path": "/contacto",
+    "hasDropdown": false
+  },
+  {
+    "id": 5,
+    "title": "Conócenos",
+    "path": "/conocenos",
+    "hasDropdown": false
+  }
+]

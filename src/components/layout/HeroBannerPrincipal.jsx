@@ -21,7 +21,10 @@ export default function HeroBannerPrincipal() {
         <div className="hero-buttons">
           {/* Borramos el Link de conocenos y dejamos solo este: */}
           <Link to="/espacios" className="hero-btn hero-btn-secondary">
-            {t('hero.btn_espacios')}
+            {t('hero.btn_emprendedor')}
+          </Link>
+          <Link to="/espacios" className="hero-btn hero-btn-secondary">
+            {t('hero.btn_empresario')}
           </Link>
         </div>
       </div>
