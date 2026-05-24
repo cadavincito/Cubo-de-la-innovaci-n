@@ -209,18 +209,74 @@
 }
 
 @media (max-width: 480px) {
+  .cubo-interactivo-section {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+
+  .cubo-interactivo-header {
+    margin-bottom: clamp(24px, 4vw, 32px);
+    padding: 0 4px;
+  }
+
+  .cubo-interactivo-title {
+    font-size: clamp(1.4rem, 3.5vw, 1.75rem);
+  }
+
+  .cubo-scene-container {
+    border-radius: 16px;
+    padding: clamp(20px, 4vw, 32px);
+  }
+
   .cubo-scene {
-    --cubo-size: 130px;
-    min-height: 240px;
+    --cubo-size: 140px;
+    min-height: 260px;
+    perspective: clamp(600px, 70vw, 900px);
+  }
+
+  .cubo-face {
+    padding: 12px;
+  }
+
+  .cubo-interactivo-hint {
+    font-size: 0.75rem;
+    padding: 0 12px;
+    margin-top: clamp(18px, 3vw, 24px);
+  }
+}
+
+@media (max-width: 375px) {
+  .cubo-scene {
+    --cubo-size: 120px;
+    min-height: 230px;
+    perspective: 550px;
   }
 
   .cubo-face {
     padding: 10px;
   }
 
-  .cubo-scene-container {
-    margin-left: 8px;
-    margin-right: 8px;
+  .cubo-face-title {
+    font-size: clamp(0.6rem, 1.6vw, 0.8rem);
+    margin-bottom: 2px;
+  }
+
+  .cubo-face-desc {
+    font-size: clamp(0.5rem, 1.2vw, 0.65rem);
+  }
+
+  .cubo-interactivo-title {
+    font-size: 1.4rem;
+  }
+}
+
+@media (pointer: coarse) {
+  .cubo-scene {
+    --cubo-size: max(130px, 28vw);
+  }
+
+  .cubo-face {
+    padding: 14px;
   }
 }
 

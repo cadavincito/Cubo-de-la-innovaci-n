@@ -1,18 +1,19 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next'; 
+import { useTranslation } from 'react-i18next';
 import menuLinks from '../../constants/menuLinks.json';
 import './Navbar.css';
 
-import logoCubo from '../../assets/images/logo-cubo.png'; 
+import logoCubo from '../../assets/images/logo-cubo.png';
 import logoGovCo from '../../assets/images/logo-gov-co.png';
-import accessibilityIcon from '../../assets/images/accessibility.png'; 
+import accessibilityIcon from '../../assets/images/accessibility.png';
 import fbIcon from '../../assets/images/facebook.png';
 import igIcon from '../../assets/images/instagram.png';
 import ytIcon from '../../assets/images/youtube.png';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
   const { i18n } = useTranslation();
 
   const changeLanguage = (lng) => {
@@ -23,8 +24,12 @@ export default function Navbar() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const toggleDropdown = (linkId) => {
+    setOpenDropdown(openDropdown === linkId ? null : linkId);
+  };
+
   const getTranslatedTitle = (title) => {
-    if (i18n.language === 'es') return title; 
+    if (i18n.language === 'es') return title;
     const translations = {
       'Conócenos': 'About Us',
       'Ofertas': 'Offers',
@@ -46,7 +51,7 @@ export default function Navbar() {
 
   return (
     <header className="navbar-wrapper">
-      
+
       <div className="topbar">
         <div className="topbar-container">
           <div className="topbar-content-right">
@@ -69,9 +74,9 @@ export default function Navbar() {
                   <img src={ytIcon} alt="YouTube" className="topbar-social-icon" />
                 </a>
               </li>
-              
+
               <li className="topbar-icon-item language-switch" title="Cambiar idioma">
-                <span 
+                <span
                   className={i18n.language === 'es' ? 'lang-active' : 'lang-inactive'}
                   onClick={() => changeLanguage('es')}
                   style={{ cursor: 'pointer' }}
@@ -79,7 +84,7 @@ export default function Navbar() {
                   ES
                 </span>
                 <span className="lang-separator"> | </span>
-                <span 
+                <span
                   className={i18n.language === 'en' ? 'lang-active' : 'lang-inactive'}
                   onClick={() => changeLanguage('en')}
                   style={{ cursor: 'pointer' }}
@@ -112,20 +117,40 @@ export default function Navbar() {
         <ul className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
           {menuLinks.map((link) => (
             <li key={link.id} className="nav-item">
-              <Link to={link.path} className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>
-                {getTranslatedTitle(link.title)} {link.hasDropdown && <span className="dropdown-icon">▼</span>}
-              </Link>
+              {link.hasDropdown ? (
+                <>
+                  <button
+                    className="nav-link"
+                    onClick={() => toggleDropdown(link.id)}
+                    type="button"
+                  >
+                    {getTranslatedTitle(link.title)}
+                    <span className={`dropdown-icon ${openDropdown === link.id ? 'open' : ''}`}>▼</span>
+                  </button>
 
-              {link.hasDropdown && link.subItems && (
-                <ul className="dropdown-menu">
-                  {link.subItems.map((subItem, index) => (
-                    <li key={index} className="dropdown-item">
-                      <Link to={subItem.path} className="dropdown-link" onClick={() => setIsMobileMenuOpen(false)}>
-                        {getTranslatedTitle(subItem.title)}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+                  {link.subItems && (
+                    <ul className={`dropdown-menu ${openDropdown === link.id ? 'active' : ''}`}>
+                      {link.subItems.map((subItem, index) => (
+                        <li key={index} className="dropdown-item">
+                          <Link
+                            to={subItem.path}
+                            className="dropdown-link"
+                            onClick={() => {
+                              setIsMobileMenuOpen(false);
+                              setOpenDropdown(null);
+                            }}
+                          >
+                            {getTranslatedTitle(subItem.title)}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </>
+              ) : (
+                <Link to={link.path} className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>
+                  {getTranslatedTitle(link.title)}
+                </Link>
               )}
             </li>
           ))}

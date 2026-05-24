@@ -211,7 +211,14 @@ html, body {
   align-items: center;
   gap: 6px;
   transition: color 0.3s ease;
-  text-decoration: none; 
+  text-decoration: none;
+}
+
+.nav-link:is(button) {
+  border: none;
+  background: none;
+  padding: 10px 0;
+  cursor: pointer;
 }
 
 .nav-link:hover {
@@ -224,6 +231,10 @@ html, body {
 }
 
 .nav-item:hover .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+.dropdown-icon.open {
   transform: rotate(180deg);
 }
 
@@ -295,7 +306,7 @@ html, body {
   .topbar-content-right { flex-wrap: wrap; justify-content: center; gap: 15px; }
   .topbar-container { padding: 10px 5%; }
   .mobile-menu-btn { display: block; }
-  
+
   .nav-links {
     position: absolute; top: 100%; left: 0; width: 100%;
     background-color: #ffffff; flex-direction: column;
@@ -316,7 +327,118 @@ html, body {
   }
 
   .nav-item:hover .dropdown-menu { display: block; }
-  
+
+  .dropdown-menu.active { display: block; }
+
   .dropdown-link { padding-left: 10%; border-left: none; }
   .dropdown-link:hover { padding-left: 12%; border-left: none; }
+}
+
+@media (max-width: 480px) {
+  .topbar {
+    padding: 6px 0;
+  }
+
+  .topbar-container {
+    padding: 6px 8px;
+    gap: 8px;
+  }
+
+  .topbar-content-right {
+    gap: 10px;
+  }
+
+  .topbar-icon-item {
+    width: 24px;
+    height: 24px;
+  }
+
+  .topbar-social-icon {
+    width: 12px;
+  }
+
+  .language-switch {
+    font-size: 10px;
+    padding: 0 5px;
+  }
+
+  .lang-separator {
+    margin: 0 2px;
+  }
+
+  .gov-co-logo-container {
+    display: none;
+  }
+
+  .main-navbar {
+    padding: 10px 12px;
+  }
+
+  .logo-img {
+    max-height: 45px;
+  }
+
+  .mobile-menu-btn {
+    font-size: 24px;
+  }
+
+  .nav-links {
+    max-height: 0;
+  }
+
+  .nav-links.active {
+    max-height: 400px;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    padding: 12px 4%;
+    font-size: 14px;
+    gap: 4px;
+  }
+
+  .dropdown-link {
+    padding: 12px 8%;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 375px) {
+  .topbar-container {
+    padding: 5px 5px;
+  }
+
+  .topbar-icon-item {
+    width: 22px;
+    height: 22px;
+  }
+
+  .topbar-social-icon {
+    width: 11px;
+  }
+
+  .language-switch {
+    font-size: 9px;
+    padding: 0 4px;
+  }
+
+  .logo-img {
+    max-height: 40px;
+  }
+
+  .mobile-menu-btn {
+    font-size: 22px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+    letter-spacing: 0;
+  }
+
+  .dropdown-link {
+    font-size: 13px;
+  }
 }
