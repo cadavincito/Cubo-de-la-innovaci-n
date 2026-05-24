@@ -12,12 +12,12 @@ export default function SectorsTicsLand() {
         {/* CABECERA (Títulos superiores de la imagen) */}
         <div className="objective-header animate-reveal">
           <h2 className="objective-main-title">
-            {isEnglish ? "STRATEGIC SECTORS" : "SECTORES ESTRATEGICOS"}
+            {isEnglish ? 'Sectors we work with' : 'Sectores en los que trabajamos'}
           </h2>
           <p className="objective-subtitle">
-            {isEnglish 
-              ? "Lead business strengthening with a focus on technology transfer in the strategic sectors of the territory." 
-              : "Liderar el fortalecimiento empresarial con enfoque en transferencia de tecnología en los sectores estratégicos del territorio."}
+            {isEnglish
+              ? 'We help local businesses grow with technology in the sectors that matter most to our region.'
+              : 'Acompañamos a empresas locales a crecer con tecnología en los sectores que más mueven nuestra región.'}
           </p>
         </div>
 

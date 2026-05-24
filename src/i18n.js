@@ -5,16 +5,16 @@ const resources = {
   es: {
     translation: {
       "hero": {
-        "subtitle": "El epicentro de Ciencia, Tecnología e Innovación para el oriente antioqueño.",
-        "route_cta": "Escoge tu Ruta dependiendo de tu perfil",
-        "btn_conocenos": "CONÓCENOS",
-        "btn_espacios": "EXPLORAR ESPACIOS",
-        "btn_empresario": "SOY EMPRESARIO",
-        "btn_emprendedor": "SOY EMPRENDEDOR / QUIERO EMPRENDER"
+        "subtitle": "Aquí conectamos ideas, talento y tecnología para hacer crecer el oriente antioqueño.",
+        "route_cta": "Cuéntanos dónde estás: te mostramos lo que más te sirve",
+        "btn_conocenos": "Conócenos",
+        "btn_espacios": "Ver espacios",
+        "btn_empresario": "Ya tengo mi negocio",
+        "btn_emprendedor": "Quiero emprender"
       },
       "ofertas_eventos": {
         "title": "Ofertas y eventos",
-        "subtitle": "Descubre los programas, retos y actividades que el Cubo de la Innovación tiene para ti.",
+        "subtitle": "Cursos, charlas y actividades pensadas para ti. ¡Hay algo nuevo casi siempre!",
         "tab_ofertas": "Ofertas",
         "tab_eventos": "Eventos",
         "view_all": "Ver todos los eventos",
@@ -23,338 +23,432 @@ const resources = {
         "place": "Lugar",
         "closes": "Cierra",
         "free_entry": "Entrada libre",
-        "see_more": "Ver más"
+        "see_more": "Ver más",
+        "view_all_offers": "Ver todas las ofertas"
+      },
+      "ofertas_page": {
+        "title": "Ofertas y convocatorias",
+        "subtitle": "Mira lo que tenemos abierto ahora y encuentra la oportunidad que encaja contigo.",
+        "category": "Categoría",
+        "profile": "Perfil",
+        "showing": "Te mostramos",
+        "results": "resultados",
+        "no_results": "No encontramos ofertas con esos filtros. Prueba con otra categoría o perfil."
+      },
+      "oferta_card": {
+        "register": "Quiero inscribirme"
       },
       "banner_conocenos": {
         "title_1": "Impulsamos el ",
-        "title_highlight": "Futuro",
-        "title_2": " de la Región",
-        "subtitle": "Ciencia y Tecnología para el Oriente Antioqueño",
-        "desc": "Acompañamos tu idea, fortalecemos tu empresa. Únete a nuestro ecosistema de innovación.",
-        "btn": "CONÓCENOS MÁS"
+        "title_highlight": "futuro",
+        "title_2": " de la región",
+        "subtitle": "Ciencia y tecnología para el oriente antioqueño",
+        "desc": "Si tienes una idea, te acompañamos. Si ya tienes empresa, te ayudamos a crecer. ¡Bienvenido al Cubo!",
+        "btn": "Quiero saber más"
       },
       "footer": {
-        "desc": "El epicentro del ecosistema de Ciencia, Tecnología e Innovación para el oriente.",
-        "quick_links": "ENLACES RÁPIDOS",
+        "desc": "Un espacio para aprender, crear y conectar en el oriente antioqueño.",
+        "quick_links": "Enlaces útiles",
         "about": "Conócenos",
-        "offers": "Ofertas y Convocatorias",
-        "spaces": "Nuestros Espacios",
+        "offers": "Ofertas y convocatorias",
+        "spaces": "Nuestros espacios",
         "services": "Servicios",
-        "citizen_service": "ATENCIÓN AL CIUDADANO",
-        "contact": "Contacto y PQRS",
-        "faq": "Preguntas Frecuentes (FAQs)",
+        "citizen_service": "Atención al ciudadano",
+        "contact": "Escríbenos",
+        "faq": "Preguntas frecuentes",
         "transparency": "Transparencia",
-        "public_policy": "Política Pública",
-        "subscribe": "SUSCRÍBETE AL BOLETÍN",
-        "subscribe_desc": "Recibe las últimas noticias, retos y convocatorias en tu correo.",
-        "email_placeholder": "Tu correo electrónico",
-        "subscribe_btn": "SUSCRIBIRSE",
+        "public_policy": "Política pública",
+        "subscribe": "Suscríbete al boletín",
+        "subscribe_desc": "Te avisamos de convocatorias, eventos y novedades. Sin spam, lo prometemos.",
+        "email_placeholder": "tu@correo.com",
+        "subscribe_btn": "Quiero recibir novedades",
         "rights": "© 2026 Cubo de la Innovación. Todos los derechos reservados."
       },
       "cubo_interactivo": {
-        "title": "Explora el Cubo",
-        "subtitle": "Gira y descubre cada línea de acción. Haz clic en una cara para conocer más.",
-        "hint": "Pasa el cursor para pausar · Haz clic en una cara para explorar",
+        "title": "Gira el Cubo y descubre",
+        "subtitle": "Arrastra con el ratón o el dedo para explorar. Toca una cara cuando veas algo que te interese.",
+        "hint": "Tip: arrastra para girar · toca una cara para ir al detalle",
         "faces": {
           "academy_title": "Tics Academy",
-          "academy_desc": "Formación digital",
+          "academy_desc": "Aprende habilidades digitales a tu ritmo",
           "rioinnova_title": "RioInnova",
-          "rioinnova_desc": "Aceleración e innovación",
+          "rioinnova_desc": "Impulsa tu idea o tu empresa",
           "land_title": "Tics Land",
-          "land_desc": "Creatividad y experimentación",
+          "land_desc": "Experimenta, crea y prueba cosas nuevas",
           "hub_title": "Hub Tics",
-          "hub_desc": "Conexión empresarial",
+          "hub_desc": "Conecta con otros y haz crecer tu red",
           "cowork_title": "CoWorklabs",
-          "cowork_desc": "Coworking y networking",
+          "cowork_desc": "Trabaja en buena compañía",
           "maker_title": "Maker Space",
-          "maker_desc": "Laboratorios y prototipado"
+          "maker_desc": "Prototipa y materializa tus ideas"
         }
       },
       "servicios_banner": {
-        "title": "Nuestros Servicios",
-        "desc": "Descubre las diferentes líneas de acción que el Cubo de la Innovación ofrece para potenciar tu talento, acelerar tu empresa y conectar con el futuro.",
+        "title": "Lo que puedes hacer aquí",
+        "desc": "Elige la ruta que más te convenga: formarte, emprender, innovar o conectar con otros.",
         "academy_title": "Tics Academy",
-        "academy_desc": "Formación en habilidades digitales.",
+        "academy_desc": "Cursos y talleres en lo digital.",
         "rioinnova_title": "RioInnova",
-        "rioinnova_desc": "Aceleración y emprendimiento.",
+        "rioinnova_desc": "Acompañamiento para emprender e innovar.",
         "land_title": "Tics Land",
-        "land_desc": "Espacios creativos y experimentación.",
+        "land_desc": "Espacios para crear y experimentar.",
         "hub_title": "Hub Tics",
-        "hub_desc": "Conexión empresarial y networking."
+        "hub_desc": "Red de contactos y oportunidades."
       },
       "aliados": {
-        "title": "Nuestros Aliados",
-        "desc": "Trabajamos de la mano con organizaciones líderes para impulsar el ecosistema de innovación."
+        "title": "Quienes caminan con nosotros",
+        "desc": "Gracias a estas organizaciones podemos abrir más puertas para ti."
       },
       "cifras": {
-        "emprendedores": "Emprendedores apoyados",
-        "eventos": "Eventos realizados",
-        "espacios": "Espacios de innovación"
+        "emprendedores": "Personas que hemos acompañado",
+        "eventos": "Eventos que hemos hecho juntos",
+        "espacios": "Espacios para crear e innovar"
       },
       "instagram": {
         "title": "Síguenos en Instagram",
         "user": "@cuboinnovacion",
-        "btn": "Ir al perfil"
+        "btn": "Ver perfil"
       },
       "conocenos_page": {
-        "proposito_title": "Nuestro Propósito",
-        "proposito_text": "Ser el principal catalizador del ecosistema de Ciencia, Tecnología e Innovación (CTel) de Rionegro y el Oriente Antioqueño, conectando el talento local con oportunidades globales y fomentando el desarrollo sostenible de la región.",
-        "historia_title": "Nuestra Historia",
-        "historia_subtitle": "Impulsando el ecosistema de innovación local",
-        "historia_text": " El Cubo de la Innovación nace como una respuesta de la política pública de ciencia, tecnología e innovación del municipio, con el propósito de consolidar el ecosistema municipal y regional de innovación. Somos un espacio creado para conectar ciudadanía, empresas, academia y Estado alrededor de la ciencia, la tecnología y la innovación, impulsando ideas, proyectos y soluciones que aporten al desarrollo y la transformación del territorio.",
-        "frase_texto": "La innovación no es solo tecnología, es la capacidad de transformar realidades y conectar el talento con el futuro.",
-        "frase_autor": "— Ecosistema Cubo de la Innovación"
+        "proposito_title": "Para qué estamos aquí",
+        "proposito_text": "Queremos que en Rionegro y el oriente antioqueño sea más fácil aprender, emprender e innovar. Conectamos personas, empresas y proyectos para que las buenas ideas no se queden en el papel.",
+        "historia_title": "Nuestra historia",
+        "historia_subtitle": "Creciendo contigo, paso a paso",
+        "historia_text": "El Cubo nació como apuesta del municipio para que la ciencia, la tecnología y la innovación estén al alcance de todos. Hoy somos un lugar donde ciudadanía, empresas, academia y gobierno se encuentran para hacer realidad proyectos que mejoran la vida en la región.",
+        "frase_texto": "Innovar no es solo usar tecnología: es cambiar las cosas para mejor y abrirle camino al talento de aquí.",
+        "frase_autor": "— Comunidad Cubo de la Innovación"
       },
       "hubtics_page": {
-        "badge": "Línea Estratégica",
+        "badge": "Línea estratégica",
         "title": "Hub Tics",
-        "desc": "Conectamos la innovación con el desarrollo territorial. El epicentro donde las ideas se convierten en proyectos de alto impacto para el Oriente Antioqueño."
+        "desc": "Unimos innovación y territorio para que las ideas se conviertan en proyectos que de verdad aporten al oriente antioqueño."
       },
       "emprendedor_page": {
-        "badge": "Perfil",
-        "title": "Soy emprendedor",
-        "subtitle": "Recursos para idear, validar y dar los primeros pasos con tu negocio en el ecosistema del Cubo de la Innovación.",
-        "programs_title": "Programas para tu etapa",
-        "phases_title": "Tu ruta de crecimiento",
-        "ofertas_title": "Ofertas para ti",
+        "badge": "Tu camino",
+        "title": "¿Estás empezando?",
+        "subtitle": "Perfecto. Aquí encontrarás formación, espacios y programas para pasar de la idea a tu primer cliente.",
+        "programs_title": "Lo que más te puede ayudar ahora",
+        "phases_title": "Tu ruta, paso a paso",
+        "ofertas_title": "Oportunidades abiertas para ti",
         "ofertas_cta": "Ver todas las ofertas",
-        "ofertas_empty": "No hay ofertas activas para tu perfil en este momento. Explora todas las convocatorias disponibles.",
-        "servicios_title": "Líneas estratégicas recomendadas",
-        "cta_title": "¿Listo para empezar?",
-        "cta_desc": "Explora nuestros espacios de innovación y da el primer paso con tu idea.",
-        "cta_btn": "Explorar espacios",
+        "ofertas_empty": "Por ahora no hay ofertas activas para emprendedores, pero puedes revisar todas las convocatorias por si aparece algo nuevo pronto.",
+        "servicios_title": "También te recomendamos",
+        "cta_title": "¿Te animas a dar el primer paso?",
+        "cta_desc": "Visita nuestros espacios, conoce a la comunidad y empieza cuando tú quieras.",
+        "cta_btn": "Ver espacios",
         "programs": {
           "academy_title": "Tics Academy",
-          "academy_desc": "Formación en habilidades digitales para cerrar brechas y fortalecer tu perfil.",
+          "academy_desc": "Aprende lo digital sin complicaciones.",
           "land_title": "Tics Land",
-          "land_desc": "Aceleración y acompañamiento en las primeras etapas de tu emprendimiento.",
+          "land_desc": "Te acompañamos en las primeras etapas de tu negocio.",
           "maker_title": "Maker Space",
-          "maker_desc": "Prototipado y fabricación digital para materializar tu idea.",
+          "maker_desc": "Prueba, prototipa y haz tangible tu idea.",
           "riogo_title": "RIO-GO",
-          "riogo_desc": "Programa gratuito para nacer con ADN digital desde el día uno.",
+          "riogo_desc": "Gratis: pon tu negocio en el mundo digital desde el día uno.",
           "cowork_title": "CoWorklabs",
-          "cowork_desc": "Espacio de colaboración y networking con otros emprendedores."
+          "cowork_desc": "Trabaja junto a otros emprendedores como tú."
         },
         "phases": {
           "ideacion_title": "Ideación",
-          "ideacion_desc": "Genera y valida ideas creativas para resolver problemas o satisfacer necesidades del mercado.",
+          "ideacion_desc": "Tienes una idea y quieres saber si tiene sentido. Aquí la exploras con calma.",
           "preincubacion_title": "Preincubación",
-          "preincubacion_desc": "Valida tu idea de negocio, define el modelo y desarrolla tu primer producto mínimo viable.",
+          "preincubacion_desc": "Validas tu idea, entiendes a tu cliente y das forma a tu primer producto.",
           "incubacion_title": "Incubación",
-          "incubacion_desc": "Accede a asesoría, formación y conexiones para formalizar procesos y lograr ventas constantes."
+          "incubacion_desc": "Recibes apoyo para ordenar tu negocio y empezar a vender de forma constante."
         }
       },
       "empresario_page": {
-        "badge": "Perfil",
-        "title": "Soy empresario",
-        "subtitle": "Soluciones para escalar, consolidar y transformar digitalmente tu empresa con el apoyo del Cubo.",
-        "programs_title": "Programas para tu empresa",
-        "phases_title": "Etapas de madurez",
-        "ofertas_title": "Ofertas para tu perfil",
+        "badge": "Tu camino",
+        "title": "¿Ya tienes empresa?",
+        "subtitle": "Genial. Aquí hay programas para escalar, digitalizarte y competir mejor.",
+        "programs_title": "Lo que más te puede servir",
+        "phases_title": "Cuando tu negocio ya va en serio",
+        "ofertas_title": "Oportunidades para tu perfil",
         "ofertas_cta": "Ver todas las ofertas",
-        "ofertas_empty": "No hay ofertas activas para tu perfil en este momento. Explora todas las convocatorias disponibles.",
-        "servicios_title": "Líneas estratégicas recomendadas",
-        "cta_title": "¿Listo para transformar tu empresa?",
-        "cta_desc": "Conecta con programas de innovación empresarial y transformación digital avanzada.",
-        "cta_btn": "Contáctanos",
+        "ofertas_empty": "Ahora mismo no hay ofertas activas para empresarios, pero vale la pena revisar todas las convocatorias.",
+        "servicios_title": "También te recomendamos",
+        "cta_title": "¿Listo para dar el siguiente paso?",
+        "cta_desc": "Escríbenos y te orientamos sobre el programa que mejor encaje con tu empresa.",
+        "cta_btn": "Hablemos",
         "programs": {
-          "rioinnova_title": "RioInnova — Innovación Empresarial",
-          "rioinnova_desc": "Aceleración de la transformación digital y retos de industria con startups locales.",
+          "rioinnova_title": "RioInnova — Innovación empresarial",
+          "rioinnova_desc": "Transformación digital y retos de industria con apoyo cercano.",
           "land_title": "Tics Land — Fortalecimiento",
-          "land_desc": "Madurez digital y competitiva para empresas en etapas de aceleración e internacionalización.",
+          "land_desc": "Para empresas que quieren crecer con más orden y competitividad.",
           "hub_title": "Hub Tics",
-          "hub_desc": "Conexión empresarial, networking y desarrollo territorial con innovación.",
+          "hub_desc": "Conecta con otros actores y abre nuevas oportunidades.",
           "smartcity_title": "Rionegro Smart City",
-          "smartcity_desc": "Territorio inteligente y decisiones basadas en datos para la competitividad regional.",
+          "smartcity_desc": "Datos e innovación para decisiones más inteligentes.",
           "observatorio_title": "Observatorio CTeI",
-          "observatorio_desc": "Indicadores de ciencia, tecnología e innovación para orientar tu estrategia.",
+          "observatorio_desc": "Información clara para planear tu estrategia.",
           "riogo_title": "RIO-GO",
-          "riogo_desc": "Expande tu negocio con procesos de venta online y experiencia de cliente digital."
+          "riogo_desc": "Lleva tus ventas y tu atención al cliente al entorno digital."
         },
         "phases": {
           "aceleracion_title": "Aceleración",
-          "aceleracion_desc": "Escala tu negocio con mentorías, financiamiento y mejoras en procesos clave.",
+          "aceleracion_desc": "Tu negocio ya funciona: ahora toca crecer con mentoría, procesos y recursos.",
           "internacionalizacion_title": "Internacionalización",
-          "internacionalizacion_desc": "Expande operaciones a mercados internacionales con estrategias adaptadas y alianzas globales."
+          "internacionalizacion_desc": "Piensas en otros mercados. Te ayudamos a dar pasos con confianza."
         }
+      },
+      "innovation_cube": {
+        "title": "Conoce el edificio planta por planta",
+        "subtitle": "Gira el modelo, pasa el cursor sobre cada piso y haz clic para ver qué servicio hay ahí.",
+        "hint": "Arrastra para girar · Clic en un piso para más info",
+        "floor1_name": "Planta 1 · Primer nivel",
+        "floor1_title": "CoWorklabs",
+        "floor1_service": "Espacios colaborativos, recepción, escritorios compartidos y salas de reuniones para trabajar en buena compañía.",
+        "floor2_name": "Planta 2 · Segundo nivel",
+        "floor2_title": "Maker Space",
+        "floor2_service": "Laboratorio de fabricación digital: impresión 3D, prototipado rápido, IoT y herramientas para materializar tus ideas.",
+        "floor3_name": "Planta 3 · Tercer nivel",
+        "floor3_title": "Cubo de la Innovación",
+        "floor3_service": "El corazón del ecosistema: eventos de alto impacto, hackathons, charlas y procesos de innovación abierta.",
+        "explore": "Ver espacio",
+        "close": "Cerrar"
+      },
+      "espacios_page": {
+        "maker_title": "Maker Space",
+        "maker_desc": "Un lugar para prototipar, crear y probar tus ideas con herramientas digitales.",
+        "cowork_title": "CoWorklabs",
+        "cowork_desc": "Trabaja en buena compañía, conecta con otros y comparte energía emprendedora.",
+        "cubo_title": "Cubo de la Innovación",
+        "cubo_desc": "Nuestro corazón: aquí se cruzan ideas, personas y proyectos que transforman la región.",
+        "explore": "Conocer este espacio"
+      },
+      "chatbot": {
+        "title": "Hola, soy Cubix",
+        "greeting": "¡Hola! 👋 Soy Cubix, tu asistente del Cubo. ¿En qué te puedo ayudar hoy?",
+        "reply": "Gracias por escribirnos. Por ahora soy una versión de prueba, pero pronto alguien del equipo te responderá. Mientras tanto, échale un vistazo a la sección de Ofertas.",
+        "placeholder": "Escribe tu mensaje aquí...",
+        "send": "Enviar",
+        "open": "Abrir chat",
+        "close": "Cerrar chat"
       }
     }
   },
   en: {
     translation: {
       "hero": {
-        "subtitle": "The epicenter of Science, Technology, and Innovation for Eastern Antioquia.",
-        "route_cta": "Choose your path based on your profile",
-        "btn_conocenos": "ABOUT US",
-        "btn_espacios": "EXPLORE SPACES",
-        "btn_empresario": "I AM A BUSINESS OWNER",
-        "btn_emprendedor": "I WANT TO START / I AM AN ENTREPRENEUR"
+        "subtitle": "We connect ideas, talent, and technology to help Eastern Antioquia grow.",
+        "route_cta": "Tell us where you are — we'll show you what fits you best",
+        "btn_conocenos": "About us",
+        "btn_espacios": "See our spaces",
+        "btn_empresario": "I already have a business",
+        "btn_emprendedor": "I want to start"
       },
       "ofertas_eventos": {
-        "title": "Offers and Events",
-        "subtitle": "Discover the programs, challenges, and activities that the Innovation Cube has for you.",
+        "title": "Offers and events",
+        "subtitle": "Courses, talks, and activities made for you. There's usually something new!",
         "tab_ofertas": "Offers",
         "tab_eventos": "Events",
-        "view_all": "View all events",
+        "view_all": "See all events",
         "date": "Date",
         "time": "Time",
         "place": "Place",
         "closes": "Closes",
         "free_entry": "Free entry",
-        "see_more": "See more"
+        "see_more": "See more",
+        "view_all_offers": "See all offers"
+      },
+      "ofertas_page": {
+        "title": "Offers and open calls",
+        "subtitle": "See what's open right now and find the opportunity that fits you.",
+        "category": "Category",
+        "profile": "Profile",
+        "showing": "Showing",
+        "results": "results",
+        "no_results": "We couldn't find offers with those filters. Try another category or profile."
+      },
+      "oferta_card": {
+        "register": "I'd like to sign up"
       },
       "banner_conocenos": {
-        "title_1": "Driving the ",
-        "title_highlight": "Future",
-        "title_2": " of the Region",
-        "subtitle": "Science and Technology for Eastern Antioquia",
-        "desc": "We support your idea, we strengthen your company. Join our innovation ecosystem.",
-        "btn": "KNOW MORE ABOUT US"
+        "title_1": "We help build the ",
+        "title_highlight": "future",
+        "title_2": " of our region",
+        "subtitle": "Science and technology for Eastern Antioquia",
+        "desc": "Have an idea? We'll walk with you. Already running a business? We'll help you grow. Welcome to the Cube!",
+        "btn": "Tell me more"
       },
       "footer": {
-        "desc": "The center of the Science, Technology, and Innovation ecosystem for the east.",
-        "quick_links": "QUICK LINKS",
-        "about": "About Us",
-        "offers": "Offers and Open Calls",
-        "spaces": "Our Spaces",
+        "desc": "A place to learn, create, and connect in Eastern Antioquia.",
+        "quick_links": "Useful links",
+        "about": "About us",
+        "offers": "Offers and open calls",
+        "spaces": "Our spaces",
         "services": "Services",
-        "citizen_service": "CITIZEN SERVICE",
-        "contact": "Contact and PQRS",
-        "faq": "Frequently Asked Questions (FAQs)",
+        "citizen_service": "Citizen support",
+        "contact": "Get in touch",
+        "faq": "FAQs",
         "transparency": "Transparency",
-        "public_policy": "Public Policy",
-        "subscribe": "SUBSCRIBE TO NEWSLETTER",
-        "subscribe_desc": "Receive the latest news, challenges, and open calls in your email.",
-        "email_placeholder": "Your email address",
-        "subscribe_btn": "SUBSCRIBE",
+        "public_policy": "Public policy",
+        "subscribe": "Join our newsletter",
+        "subscribe_desc": "We'll let you know about open calls, events, and news. No spam, we promise.",
+        "email_placeholder": "you@email.com",
+        "subscribe_btn": "Keep me updated",
         "rights": "© 2026 Cubo de la Innovación. All rights reserved."
       },
       "cubo_interactivo": {
-        "title": "Explore the Cube",
-        "subtitle": "Spin and discover each line of action. Click a face to learn more.",
-        "hint": "Hover to pause · Click a face to explore",
+        "title": "Spin the Cube and explore",
+        "subtitle": "Drag with your mouse or finger to look around. Tap a face when something catches your eye.",
+        "hint": "Tip: drag to spin · tap a face for details",
         "faces": {
           "academy_title": "Tics Academy",
-          "academy_desc": "Digital training",
+          "academy_desc": "Learn digital skills at your pace",
           "rioinnova_title": "RioInnova",
-          "rioinnova_desc": "Acceleration & innovation",
+          "rioinnova_desc": "Boost your idea or business",
           "land_title": "Tics Land",
-          "land_desc": "Creativity & experimentation",
+          "land_desc": "Experiment, create, and try new things",
           "hub_title": "Hub Tics",
-          "hub_desc": "Business connection",
+          "hub_desc": "Meet people and grow your network",
           "cowork_title": "CoWorklabs",
-          "cowork_desc": "Coworking & networking",
+          "cowork_desc": "Work alongside others",
           "maker_title": "Maker Space",
-          "maker_desc": "Labs & prototyping"
+          "maker_desc": "Prototype and bring ideas to life"
         }
       },
       "servicios_banner": {
-        "title": "Our Services",
-        "desc": "Discover the different lines of action that the Innovation Cube offers to boost your talent, accelerate your company, and connect with the future.",
+        "title": "What you can do here",
+        "desc": "Pick the path that suits you: learn, start up, innovate, or connect with others.",
         "academy_title": "Tics Academy",
-        "academy_desc": "Digital skills training.",
+        "academy_desc": "Courses and workshops in digital skills.",
         "rioinnova_title": "RioInnova",
-        "rioinnova_desc": "Acceleration and entrepreneurship.",
+        "rioinnova_desc": "Support to start up and innovate.",
         "land_title": "Tics Land",
-        "land_desc": "Creative spaces and experimentation.",
+        "land_desc": "Spaces to create and experiment.",
         "hub_title": "Hub Tics",
-        "hub_desc": "Business connection and networking."
+        "hub_desc": "Network and opportunities."
       },
       "aliados": {
-        "title": "Our Partners",
-        "desc": "We work hand in hand with leading organizations to drive the innovation ecosystem."
+        "title": "Who walks with us",
+        "desc": "Thanks to these partners, we can open more doors for you."
       },
       "cifras": {
-        "emprendedores": "Supported entrepreneurs",
-        "eventos": "Events hosted",
-        "espacios": "Innovation spaces"
+        "emprendedores": "People we've supported",
+        "eventos": "Events we've shared",
+        "espacios": "Spaces to create and innovate"
       },
       "instagram": {
         "title": "Follow us on Instagram",
         "user": "@cuboinnovacion",
-        "btn": "Go to profile"
+        "btn": "View profile"
       },
       "conocenos_page": {
-        "proposito_title": "Our Purpose",
-        "proposito_text": "To be the main catalyst of the Science, Technology, and Innovation (STI) ecosystem in Rionegro and Eastern Antioquia, connecting local talent with global opportunities and fostering the sustainable development of the region.",
-        "historia_title": "Our History",
-        "historia_subtitle": "Driving the local innovation ecosystem",
-        "historia_text": "The Innovation Cube was born as an initiative of the municipality of Rionegro, Antioquia, with the goal of strengthening the innovation, science, and technology ecosystem in the Eastern Antioquia region. Its creation is part of a smart and sustainable territorial development strategy, where education, entrepreneurship, and technology come together to boost the municipality's competitiveness.",
-        "frase_texto": "Innovation is not just technology; it is the ability to transform realities and connect talent with the future.",
-        "frase_autor": "— Innovation Cube Ecosystem"
+        "proposito_title": "Why we're here",
+        "proposito_text": "We want learning, entrepreneurship, and innovation to feel accessible in Rionegro and Eastern Antioquia. We connect people, companies, and projects so good ideas don't stay on paper.",
+        "historia_title": "Our story",
+        "historia_subtitle": "Growing with you, step by step",
+        "historia_text": "The Cube started as the municipality's bet to bring science, technology, and innovation closer to everyone. Today we're a place where citizens, businesses, academia, and government meet to make projects that improve life in the region.",
+        "frase_texto": "Innovating isn't just about tech — it's about making things better and giving local talent a fair chance.",
+        "frase_autor": "— Cubo de la Innovación community"
       },
       "hubtics_page": {
-        "badge": "Strategic Line",
+        "badge": "Strategic line",
         "title": "Hub Tics",
-        "desc": "We connect innovation with territorial development. The epicenter where ideas become high-impact projects for Eastern Antioquia."
+        "desc": "We link innovation and territory so ideas become projects that truly matter for Eastern Antioquia."
       },
       "emprendedor_page": {
-        "badge": "Profile",
-        "title": "I am an entrepreneur",
-        "subtitle": "Resources to ideate, validate, and take the first steps with your business in the Innovation Cube ecosystem.",
-        "programs_title": "Programs for your stage",
-        "phases_title": "Your growth path",
-        "ofertas_title": "Offers for you",
-        "ofertas_cta": "View all offers",
-        "ofertas_empty": "There are no active offers for your profile right now. Explore all available open calls.",
-        "servicios_title": "Recommended strategic lines",
-        "cta_title": "Ready to get started?",
-        "cta_desc": "Explore our innovation spaces and take the first step with your idea.",
-        "cta_btn": "Explore spaces",
+        "badge": "Your path",
+        "title": "Just getting started?",
+        "subtitle": "Great. Here you'll find training, spaces, and programs to go from idea to first customer.",
+        "programs_title": "What can help you most right now",
+        "phases_title": "Your path, step by step",
+        "ofertas_title": "Open opportunities for you",
+        "ofertas_cta": "See all offers",
+        "ofertas_empty": "There are no active offers for entrepreneurs right now, but check all open calls — something new may come up soon.",
+        "servicios_title": "We also recommend",
+        "cta_title": "Ready to take the first step?",
+        "cta_desc": "Visit our spaces, meet the community, and start whenever you're ready.",
+        "cta_btn": "See spaces",
         "programs": {
           "academy_title": "Tics Academy",
-          "academy_desc": "Digital skills training to close gaps and strengthen your profile.",
+          "academy_desc": "Learn digital skills without the fuss.",
           "land_title": "Tics Land",
-          "land_desc": "Acceleration and support in the early stages of your venture.",
+          "land_desc": "Support in the early stages of your business.",
           "maker_title": "Maker Space",
-          "maker_desc": "Prototyping and digital fabrication to bring your idea to life.",
+          "maker_desc": "Try things out and make your idea tangible.",
           "riogo_title": "RIO-GO",
-          "riogo_desc": "Free program to launch with digital DNA from day one.",
+          "riogo_desc": "Free: take your business digital from day one.",
           "cowork_title": "CoWorklabs",
-          "cowork_desc": "Collaboration and networking space with other entrepreneurs."
+          "cowork_desc": "Work alongside other entrepreneurs like you."
         },
         "phases": {
           "ideacion_title": "Ideation",
-          "ideacion_desc": "Generate and validate creative ideas to solve problems or meet market needs.",
+          "ideacion_desc": "You have an idea and want to see if it makes sense. Explore it here at your pace.",
           "preincubacion_title": "Pre-incubation",
-          "preincubacion_desc": "Validate your business idea, define the model, and develop your first minimum viable product.",
+          "preincubacion_desc": "Validate your idea, understand your customer, and shape your first product.",
           "incubacion_title": "Incubation",
-          "incubacion_desc": "Access mentoring, training, and connections to formalize processes and achieve steady sales."
+          "incubacion_desc": "Get support to organize your business and start selling steadily."
         }
       },
       "empresario_page": {
-        "badge": "Profile",
-        "title": "I am a business owner",
-        "subtitle": "Solutions to scale, consolidate, and digitally transform your company with support from the Cube.",
-        "programs_title": "Programs for your company",
-        "phases_title": "Maturity stages",
-        "ofertas_title": "Offers for your profile",
-        "ofertas_cta": "View all offers",
-        "ofertas_empty": "There are no active offers for your profile right now. Explore all available open calls.",
-        "servicios_title": "Recommended strategic lines",
-        "cta_title": "Ready to transform your company?",
-        "cta_desc": "Connect with corporate innovation and advanced digital transformation programs.",
-        "cta_btn": "Contact us",
+        "badge": "Your path",
+        "title": "Already running a business?",
+        "subtitle": "Perfect. Here are programs to scale, go digital, and compete better.",
+        "programs_title": "What can help you most",
+        "phases_title": "When your business is ready to grow",
+        "ofertas_title": "Opportunities for you",
+        "ofertas_cta": "See all offers",
+        "ofertas_empty": "No active offers for business owners right now, but it's worth checking all open calls.",
+        "servicios_title": "We also recommend",
+        "cta_title": "Ready for the next step?",
+        "cta_desc": "Write to us and we'll point you to the program that fits your company best.",
+        "cta_btn": "Let's talk",
         "programs": {
-          "rioinnova_title": "RioInnova — Corporate Innovation",
-          "rioinnova_desc": "Accelerating digital transformation and industry challenges with local startups.",
+          "rioinnova_title": "RioInnova — Business innovation",
+          "rioinnova_desc": "Digital transformation and industry challenges with close support.",
           "land_title": "Tics Land — Strengthening",
-          "land_desc": "Digital maturity and competitiveness for companies in acceleration and internationalization stages.",
+          "land_desc": "For companies that want to grow with more structure and competitiveness.",
           "hub_title": "Hub Tics",
-          "hub_desc": "Business connection, networking, and territorial development through innovation.",
+          "hub_desc": "Connect with others and find new opportunities.",
           "smartcity_title": "Rionegro Smart City",
-          "smartcity_desc": "Smart territory and data-driven decisions for regional competitiveness.",
+          "smartcity_desc": "Data and innovation for smarter decisions.",
           "observatorio_title": "CTeI Observatory",
-          "observatorio_desc": "Science, technology, and innovation indicators to guide your strategy.",
+          "observatorio_desc": "Clear information to plan your strategy.",
           "riogo_title": "RIO-GO",
-          "riogo_desc": "Expand your business with online sales processes and digital customer experience."
+          "riogo_desc": "Bring your sales and customer care into the digital world."
         },
         "phases": {
           "aceleracion_title": "Acceleration",
-          "aceleracion_desc": "Scale your business with mentoring, funding, and improvements in key processes.",
+          "aceleracion_desc": "Your business works — now it's time to grow with mentoring, processes, and resources.",
           "internacionalizacion_title": "Internationalization",
-          "internacionalizacion_desc": "Expand operations to international markets with adapted strategies and global partnerships."
+          "internacionalizacion_desc": "You're thinking about other markets. We'll help you take confident steps."
         }
+      },
+      "innovation_cube": {
+        "title": "Explore the building floor by floor",
+        "subtitle": "Rotate the model, hover over each floor, and click to see what's there.",
+        "hint": "Drag to rotate · Click a floor for details",
+        "floor1_name": "Floor 1 · Ground level",
+        "floor1_title": "CoWorklabs",
+        "floor1_service": "Collaborative spaces, reception, shared desks, and meeting rooms to work alongside others.",
+        "floor2_name": "Floor 2 · Second level",
+        "floor2_title": "Maker Space",
+        "floor2_service": "Digital fabrication lab: 3D printing, rapid prototyping, IoT, and tools to bring your ideas to life.",
+        "floor3_name": "Floor 3 · Third level",
+        "floor3_title": "Innovation Cube",
+        "floor3_service": "The heart of the ecosystem: high-impact events, hackathons, talks, and open innovation processes.",
+        "explore": "See space",
+        "close": "Close"
+      },
+      "espacios_page": {
+        "maker_title": "Maker Space",
+        "maker_desc": "A place to prototype, create, and test your ideas with digital tools.",
+        "cowork_title": "CoWorklabs",
+        "cowork_desc": "Work alongside others, connect, and share entrepreneurial energy.",
+        "cubo_title": "Innovation Cube",
+        "cubo_desc": "Our heart: where ideas, people, and projects that transform the region meet.",
+        "explore": "Explore this space"
+      },
+      "chatbot": {
+        "title": "Hi, I'm Cubix",
+        "greeting": "Hi! 👋 I'm Cubix, your Cube assistant. How can I help you today?",
+        "reply": "Thanks for reaching out. I'm still a beta version, but someone from the team will reply soon. In the meantime, check out our Offers section.",
+        "placeholder": "Type your message here...",
+        "send": "Send",
+        "open": "Open chat",
+        "close": "Close chat"
       }
     }
   }
@@ -364,7 +458,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: "es", 
+    lng: "es",
     fallbackLng: "es",
     interpolation: { escapeValue: false }
   });

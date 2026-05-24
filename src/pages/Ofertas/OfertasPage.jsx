@@ -5,8 +5,7 @@ import OfertaCard from '../../components/common/OfertaCard';
 import './OfertasPage.css';
 
 export default function OfertasPage() {
-  const { i18n } = useTranslation();
-  const isEnglish = i18n.language === 'en';
+  const { t } = useTranslation();
 
   const [categoriaActiva, setCategoriaActiva] = useState('Todas');
   const [perfilActivo, setPerfilActivo] = useState('Todos');
@@ -32,18 +31,14 @@ export default function OfertasPage() {
   return (
     <div className="ofertas-page-container">
       <header className="ofertas-header">
-        <h1>{isEnglish ? 'Offers & Calls' : 'Ofertas y Convocatorias'}</h1>
-        <p>
-          {isEnglish
-            ? 'Explore all our active programs'
-            : 'Explora todos nuestros programas activos'}
-        </p>
+        <h1>{t('ofertas_page.title')}</h1>
+        <p>{t('ofertas_page.subtitle')}</p>
       </header>
 
       <div className="ofertas-content-layout">
         <aside className="filters-sidebar">
           <div className="filter-group">
-            <h3>{isEnglish ? 'Category' : 'Categoría'}</h3>
+            <h3>{t('ofertas_page.category')}</h3>
             <div className="filter-buttons">
               {categoriasUnicas.map((cat) => (
                 <button
@@ -59,7 +54,7 @@ export default function OfertasPage() {
           </div>
 
           <div className="filter-group">
-            <h3>{isEnglish ? 'Profile' : 'Perfil'}</h3>
+            <h3>{t('ofertas_page.profile')}</h3>
             <div className="filter-buttons">
               {perfilesUnicos.map((perf) => (
                 <button
@@ -77,8 +72,8 @@ export default function OfertasPage() {
 
         <main className="ofertas-grid-container">
           <div className="results-count">
-            {isEnglish ? 'Showing' : 'Mostrando'} {ofertasFiltradas.length}{' '}
-            {isEnglish ? 'results' : 'resultados'}
+            {t('ofertas_page.showing')} {ofertasFiltradas.length}{' '}
+            {t('ofertas_page.results')}
           </div>
 
           <div className="ofertas-grid">
@@ -89,11 +84,7 @@ export default function OfertasPage() {
 
           {ofertasFiltradas.length === 0 && (
             <div className="no-results">
-              <p>
-                {isEnglish
-                  ? 'No offers found for these filters.'
-                  : 'No se encontraron ofertas con estos filtros.'}
-              </p>
+              <p>{t('ofertas_page.no_results')}</p>
             </div>
           )}
         </main>

@@ -51,13 +51,13 @@ export default function RouteTicsLand() {
         <div className="route-header animate-reveal">
           <div className="route-header-text">
             <h2 className="route-main-title">
-              {isEnglish ? "THE ENTREPRENEUR'S " : "LA RUTA DEL "}
-              <span className="route-highlight-title">{isEnglish ? "ROUTE" : "EMPRENDEDOR"}</span>
+              {isEnglish ? 'Your path as an ' : 'Tu ruta como '}
+              <span className="route-highlight-title">{isEnglish ? 'entrepreneur' : 'emprendedor'}</span>
             </h2>
             <p className="route-subtitle">
-              {isEnglish 
-                ? "The path to turn an innovative idea into a company with global impact." 
-                : "El camino para convertir una idea innovadora en una empresa de impacto global."}
+              {isEnglish
+                ? 'A clear guide to turn your idea into a business that grows with you.'
+                : 'Una guía clara para pasar de tu idea a un negocio que crece contigo.'}
             </p>
           </div>
           
@@ -66,8 +66,8 @@ export default function RouteTicsLand() {
               <span className="ebt-icon">i</span>
             </div>
             <div className="ebt-info-text">
-              <strong>{isEnglish ? "¿What is an EBT?" : "¿Qué es una EBT?"}</strong>
-              <p>{isEnglish ? "Technology-Based Company that develops innovative solutions based on scientific and technological knowledge." : "Empresa de Base Tecnológica que desarrolla soluciones innovadoras basadas en conocimiento científico y tecnológico."}</p>
+              <strong>{isEnglish ? 'What is an EBT?' : '¿Qué es una EBT?'}</strong>
+              <p>{isEnglish ? 'A technology-based company that creates innovative solutions using science and tech.' : 'Una empresa que usa ciencia y tecnología para crear soluciones innovadoras.'}</p>
             </div>
           </div>
         </div>
@@ -104,7 +104,7 @@ export default function RouteTicsLand() {
 
                 {/* Título inferior */}
                 <h4 className="info-title">{step.title}</h4>
-                <span className="node-click-hint">{isEnglish ? "Click to open" : "Clic para abrir"}</span>
+                <span className="node-click-hint">{isEnglish ? 'Tap to learn more' : 'Toca para ver más'}</span>
               </div>
             ))}
           </div>
@@ -114,8 +114,8 @@ export default function RouteTicsLand() {
         <div className="route-bottom-banner animate-reveal delay-2">
           <div className="banner-features">
             <div className="feature-intro">
-              <h4>{isEnglish ? "ONE PATH, ONE IMPACT" : "UN CAMINO, UN IMPACTO"}</h4>
-              <p>{isEnglish ? "Each step brings you closer to conquering the world." : "Cada etapa te acerca más a transformar tu idea en una empresa sólida, escalable y lista para conquistar el mundo."}</p>
+              <h4>{isEnglish ? 'One path, one impact' : 'Un camino, un impacto'}</h4>
+              <p>{isEnglish ? 'Each step helps you build a stronger, more scalable business.' : 'Cada etapa te acerca a una empresa más sólida, escalable y lista para crecer.'}</p>
             </div>
             
             <div className="feature-icons">
@@ -128,11 +128,10 @@ export default function RouteTicsLand() {
 
           <div className="banner-cta">
             <div className="cta-content">
-              <h4>{isEnglish ? "¿Ready to start your route?" : "¿Listo para iniciar tu ruta?"}</h4>
-              <p>{isEnglish ? "The first step is to start!" : "El emprendimiento es un viaje lleno de desafíos, aprendizajes y oportunidades. ¡El primer paso es empezar!"}</p>
-              {/* 👇 PON TU LINK AQUÍ 👇 */}
+              <h4>{isEnglish ? 'Ready to start your path?' : '¿Listo para empezar tu ruta?'}</h4>
+              <p>{isEnglish ? 'Every journey begins with a first step — yours can start today.' : 'Emprender es aprender en el camino. ¡Tu primer paso puede ser hoy!'}</p>
               <a href="https://tulink.com" target="_blank" rel="noopener noreferrer" className="cta-btn">
-                {isEnglish ? "START ROUTE" : "INICIAR RUTA"}
+                {isEnglish ? 'Start my path' : 'Empezar mi ruta'}
               </a>
             </div>
             <div className="cta-rocket">🚀</div>
@@ -153,7 +152,7 @@ export default function RouteTicsLand() {
             <div className="popup-body">
               <p className="popup-desc">{activeStep.desc}</p>
               <div className="popup-ebt-box">
-                <div className="ebt-badge" style={{ backgroundColor: activeStep.color }}>PERFIL EBT</div>
+                <div className="ebt-badge" style={{ backgroundColor: activeStep.color }}>{isEnglish ? 'Ideal profile' : 'Perfil ideal'}</div>
                 <p>{activeStep.perfil}</p>
               </div>
             </div>

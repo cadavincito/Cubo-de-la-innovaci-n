@@ -15,7 +15,7 @@ function resolveOfertaImage(image) {
 }
 
 export default function OfertaCard({ oferta }) {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const isEnglish = i18n.language === 'en';
 
   if (!oferta) return null;
@@ -42,7 +42,7 @@ export default function OfertaCard({ oferta }) {
         <p className="oferta-card-desc">{content.description}</p>
         
         <a href={oferta.link?.trim()} target="_blank" rel="noopener noreferrer" className="oferta-card-link">
-          {isEnglish ? "Register " : "Inscribirse "} <span>→</span>
+          {t('oferta_card.register')} <span>→</span>
         </a>
       </div>
     </div>

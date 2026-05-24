@@ -2,6 +2,7 @@ import React from 'react';
 import './Home.css';
 import HeroBannerPrincipal from '../../components/layout/HeroBannerPrincipal';
 import CuboInteractivo from '../../components/ui/CuboInteractivo';
+import InnovationMap from '../../components/InnovationMap';
 import OfertasEventosSection from './components/OfertasEventosSection';
 import CifrasSection from './components/CifrasSection';
 import InstagramFeedSection from './components/InstagramFeedSection';
@@ -14,6 +15,7 @@ export default function Home() {
     <div className="home-container">
       <HeroBannerPrincipal />
       <CuboInteractivo />
+      <InnovationMap />
       <OfertasEventosSection />
       <BannerConocenos />
       <CifrasSection />

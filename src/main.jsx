@@ -4,6 +4,7 @@ import App from './App';
 
 // El motor de idiomas que acabamos de instalar
 import './i18n';
+import './styles/tailwind.css';
 import './styles/App.css';
 import './styles/responsive.css';
 

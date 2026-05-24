@@ -1,7 +1,7 @@
 .cubo-interactivo-section {
   position: relative;
   padding: var(--section-padding-y, 80px) var(--section-padding-x, 5%) 100px;
-  background: linear-gradient(180deg, #f0f6fc 0%, #ffffff 50%, #f8fafc 100%);
+  background: linear-gradient(160deg, #042444 0%, #0967a6 45%, #0b6cb5 100%);
   font-family: 'Montserrat', sans-serif;
   overflow: hidden;
 }
@@ -9,12 +9,8 @@
 .cubo-interactivo-section::before {
   content: '';
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: min(600px, 100vw);
-  height: min(600px, 100vw);
-  transform: translate(-50%, -50%);
-  background: radial-gradient(circle, rgba(11, 108, 181, 0.08) 0%, transparent 70%);
+  inset: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(0, 210, 255, 0.12) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -30,49 +26,62 @@
 .cubo-interactivo-title {
   font-size: clamp(1.75rem, 4vw, 2.5rem);
   font-weight: 900;
-  color: #042444;
+  color: #ffffff;
   margin-bottom: 12px;
   line-height: 1.15;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
 }
 
 .cubo-interactivo-subtitle {
   font-size: clamp(0.95rem, 2vw, 1.1rem);
-  color: #555;
+  color: rgba(255, 255, 255, 0.92);
   line-height: 1.7;
   margin: 0;
+}
+
+.cubo-scene-container {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: clamp(32px, 6vw, 48px);
+  border-radius: 24px;
+  background: linear-gradient(
+    145deg,
+    rgba(4, 36, 68, 0.85) 0%,
+    rgba(9, 103, 166, 0.75) 50%,
+    rgba(11, 108, 181, 0.65) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .cubo-scene {
   --cubo-size: clamp(140px, 28vw, 200px);
   position: relative;
-  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: clamp(260px, 45vw, 340px);
   perspective: clamp(600px, 80vw, 1200px);
   perspective-origin: 50% 45%;
-  padding: 0 8px;
+  touch-action: none;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.cubo-scene--dragging {
+  cursor: grabbing;
 }
 
 .cubo-animator {
   width: var(--cubo-size);
   height: var(--cubo-size);
   transform-style: preserve-3d;
-  animation: cubo-rotate 24s linear infinite;
-}
-
-.cubo-scene:hover .cubo-animator {
-  animation-play-state: paused;
-}
-
-@keyframes cubo-rotate {
-  from {
-    transform: rotateX(-18deg) rotateY(0deg);
-  }
-  to {
-    transform: rotateX(-18deg) rotateY(360deg);
-  }
+  will-change: transform;
 }
 
 .cubo-inner {
@@ -94,7 +103,7 @@
   justify-content: flex-end;
   align-items: flex-start;
   text-align: left;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 12px;
   cursor: pointer;
   backface-visibility: hidden;
@@ -110,6 +119,8 @@
   box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.15);
   transition: filter 0.25s ease, box-shadow 0.25s ease;
   font-family: inherit;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .cubo-face:hover,
@@ -127,7 +138,8 @@
   top: clamp(10px, 2vw, 16px);
   right: clamp(10px, 2vw, 16px);
   font-size: clamp(1rem, 2vw, 1.25rem);
-  opacity: 0.85;
+  opacity: 0.95;
+  color: #ffffff;
 }
 
 .cubo-face-title {
@@ -135,15 +147,17 @@
   font-weight: 800;
   margin: 0 0 4px;
   line-height: 1.2;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
 }
 
 .cubo-face-desc {
   font-size: clamp(0.6rem, 1.4vw, 0.75rem);
   line-height: 1.35;
   margin: 0;
-  opacity: 0.9;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   max-width: 100%;
 }
 
@@ -175,9 +189,9 @@
   position: relative;
   z-index: 1;
   text-align: center;
-  margin: clamp(20px, 4vw, 32px) 0 0;
+  margin: clamp(24px, 4vw, 36px) 0 0;
   font-size: clamp(0.8rem, 2vw, 0.9rem);
-  color: #666;
+  color: rgba(255, 255, 255, 0.85);
   font-weight: 500;
   padding: 0 16px;
 }
@@ -186,6 +200,11 @@
   .cubo-interactivo-section {
     padding-top: 60px;
     padding-bottom: 72px;
+  }
+
+  .cubo-scene-container {
+    border-radius: 20px;
+    padding: 24px 16px;
   }
 }
 
@@ -198,11 +217,15 @@
   .cubo-face {
     padding: 10px;
   }
+
+  .cubo-scene-container {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .cubo-animator {
-    animation: none;
-    transform: rotateX(-18deg) rotateY(-30deg);
+    transition: transform 0.15s ease-out;
   }
 }

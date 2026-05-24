@@ -99,8 +99,7 @@
   font-size: clamp(0.85rem, 2vw, 1.125rem);
   font-weight: 800;
   text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   transition: all 0.3s ease;
   cursor: pointer;
   display: inline-flex;

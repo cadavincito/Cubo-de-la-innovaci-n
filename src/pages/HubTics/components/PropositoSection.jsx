@@ -18,24 +18,22 @@ export default function PropositoSection() {
           <h3 className="proposito-etiqueta">HubTICs</h3>
           <h2 className="proposito-title">
             {isEnglish ? (
-              <>We integrate <span className="highlight-tech">TECH</span> capabilities into the PMD management</>
+              <>We bring <span className="highlight-tech">tech</span> closer to how Rionegro works</>
             ) : (
-              <>Integramos capacidades <span className="highlight-tech">TECH</span> en la gestión del PMD</>
+              <>Acercamos la <span className="highlight-tech">tecnología</span> a la gestión de Rionegro</>
             )}
           </h2>
           
           <div className="proposito-description">
             <p>
-              {isEnglish 
-                ? 'The Hub TICs component aims to boost the Municipal Development Plan "Rionegro, City of Well-being" through the strategic implementation of technological tools that strengthen public management and territorial competitiveness. Through initiatives in Smart Cities, the consolidation of connectivity and Neutral Internet Network, and the creation of the Science, Technology and Innovation Observatory (CTeI).'
-                : 'El componente Hub TICs tiene como propósito impulsar el Plan de Desarrollo Municipal Rionegro, Ciudad del Bienestar mediante la implementación estratégica de herramientas tecnológicas que fortalezcan la gestión pública y la competitividad territorial. A través de iniciativas en Ciudad Inteligente (Smart Cities), la consolidación de la conectividad y Red Neutra de internet, y la creación del Observatorio de Ciencia, Tecnología e Innovación (CTeI).'
-              }
+              {isEnglish
+                ? 'Hub TICs supports Rionegro’s development plan with tools that make public management smarter and the territory more competitive — from Smart City projects to connectivity and the Science, Technology and Innovation Observatory.'
+                : 'Hub TICs apoya el plan de desarrollo de Rionegro con herramientas que hacen la gestión pública más inteligente y el territorio más competitivo: desde Ciudad Inteligente hasta conectividad y el Observatorio de Ciencia, Tecnología e Innovación.'}
             </p>
             <p>
               {isEnglish
-                ? 'These initiatives seek to improve data-driven decision making, close digital divides, and stimulate the local innovation ecosystem. In this way, technology becomes a transversal enabler of well-being, sustainability, and economic development in the municipality.'
-                : 'Con estas iniciativas se busca mejorar la toma de decisiones basada en datos, cerrar brechas digitales y dinamizar el ecosistema de innovación local. De esta manera, la tecnología se convierte en un habilitador transversal del bienestar, la sostenibilidad y el desarrollo económico del municipio.'
-              }
+                ? 'The goal is simple: better decisions with data, fewer digital gaps, and a local innovation ecosystem that works for everyone.'
+                : 'La meta es sencilla: mejores decisiones con datos, menos brechas digitales y un ecosistema de innovación local que funcione para todos.'}
             </p>
           </div>
         </div>

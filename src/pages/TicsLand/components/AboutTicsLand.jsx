@@ -13,12 +13,12 @@ export default function AboutTicsLand() {
         <div className="about-row">
           <div className="about-content-left animate-reveal">
             <h2 className="tics-land-section-title">
-              {isEnglish ? "What is TICs-LAND?" : "¿Qué es TICs-LAND?"}
+              {isEnglish ? 'What is TICs-LAND?' : '¿Qué es TICs-LAND?'}
             </h2>
             <p className="text-justified">
               {isEnglish
-                ? "TICs-LAND is the strategic axis of the Sub-secretariat of Territory TICs dedicated to the sophistication of the business fabric of Rionegro. It acts as an acceleration platform that connects technical knowledge with market needs, making it easier for local entrepreneurs and companies to adopt emerging technologies to compete in the global economy."
-                : "TICs-LAND es el eje estratégico de la Subsecretaría de Territorio TICs dedicado a la sofisticación del tejido empresarial de Rionegro. Actúa como una plataforma de aceleración que conecta el conocimiento técnico con las necesidades del mercado, facilitando que emprendedores y empresas locales adopten tecnologías emergentes para competir en la economía global."}
+                ? 'TICs-LAND helps Rionegro businesses grow with technology. We connect technical know-how with real market needs so entrepreneurs and companies can adopt new tools and compete better.'
+                : 'TICs-LAND ayuda a las empresas de Rionegro a crecer con tecnología. Conectamos el conocimiento técnico con las necesidades del mercado para que emprendedores y empresas adopten nuevas herramientas y compitan mejor.'}
             </p>
           </div>
           <div className="about-visual-right animate-reveal delay-1">
@@ -47,12 +47,12 @@ export default function AboutTicsLand() {
           </div>
           <div className="about-content-right animate-reveal delay-3">
             <h3 className="tics-land-subtitle">
-              {isEnglish ? "Purpose" : "PROPÓSITO"}
+              {isEnglish ? 'Our purpose' : 'Nuestro propósito'}
             </h3>
             <p className="text-justified">
               {isEnglish
-                ? "To boost the territorial competitiveness of Rionegro by transforming traditional businesses into technology-based companies, ensuring that innovation is the engine of sustainable economic development for every citizen of Rionegro."
-                : "Impulsar la competitividad territorial de Rionegro transformando negocios tradicionales en empresas de base tecnológica, garantizando que la innovación sea el motor de desarrollo económico sostenible para cada rionegrero."}
+                ? 'We want Rionegro to be more competitive by helping traditional businesses become technology-driven companies — with innovation that benefits everyone in the community.'
+                : 'Queremos que Rionegro sea más competitiva ayudando a negocios tradicionales a convertirse en empresas con base tecnológica, con innovación que beneficie a toda la comunidad.'}
             </p>
           </div>
         </div>

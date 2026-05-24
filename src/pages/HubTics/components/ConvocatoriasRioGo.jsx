@@ -24,7 +24,7 @@ export default function ConvocatoriasRioGo() {
       <div className="riogo-glass-card">
         <div className="riogo-content-new">
           <h3 className="riogo-label-new">
-            {isEnglish ? "New Program" : "Nuevo Programa"}
+            {isEnglish ? 'New program' : 'Programa nuevo'}
           </h3>
           
           {/* 👇 AQUÍ ESTÁ EL CAMBIO PRINCIPAL: USAMOS EL LOGO COMO TÍTULO 👇 */}
@@ -34,13 +34,12 @@ export default function ConvocatoriasRioGo() {
           
           <p className="riogo-description-new">
             {isEnglish
-              ? "Participate in our open innovation challenges. We are looking for creative minds to solve our city's challenges using technology and creativity."
-              : "Participa en nuestros desafíos de innovación abierta. Buscamos mentes creativas para resolver los retos de nuestra ciudad utilizando tecnología y creatividad."
-            }
+              ? 'Join our open innovation challenges. We need creative people like you to help solve real city problems with technology.'
+              : 'Únete a nuestros retos de innovación abierta. Buscamos personas creativas como tú para resolver problemas reales de la ciudad con tecnología.'}
           </p>
           
           <Link to="/servicios/riogo" className="riogo-btn-new">
-            {isEnglish ? "See details and participate" : "Ver detalles y participar"}
+            {isEnglish ? 'See how to join' : 'Ver cómo participar'}
           </Link>
         </div>
       </div>

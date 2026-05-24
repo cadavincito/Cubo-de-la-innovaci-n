@@ -12,7 +12,7 @@ export default function LinesTicsLand() {
         {/* Título de la Sección */}
         <div className="lines-header animate-reveal">
           <h2 className="tics-land-section-title text-center">
-            {isEnglish ? "Lines of Action" : "Líneas de Acción"}
+            {isEnglish ? 'How we help you' : 'Cómo te acompañamos'}
           </h2>
           <div className="title-underline"></div>
         </div>
@@ -27,9 +27,9 @@ export default function LinesTicsLand() {
                 {isEnglish ? "R&D&I Projects" : "Proyectos de I+D+i"}
               </h3>
               <p className="ribbon-card-text">
-                {isEnglish 
-                  ? "Coordinate the structuring and management of Research, Development, and Innovation (R&D&I) initiatives that respond to the technological challenges of strategic sectors." 
-                  : "Articular la estructuración y gestión de iniciativas de Investigación, Desarrollo e Innovación (I+D+i) que den respuesta a los retos tecnológicos de los sectores estratégicos."}
+                {isEnglish
+                  ? 'We support research and innovation projects that solve real challenges in key sectors.'
+                  : 'Apoyamos proyectos de investigación e innovación que resuelven retos reales en sectores clave.'}
               </p>
             </div>
             {/* Cinta fluida (Lazo izquierdo) */}
@@ -53,9 +53,9 @@ export default function LinesTicsLand() {
                 {isEnglish ? "STEAM Talent" : "Talento STEAM"}
               </h3>
               <p className="ribbon-card-text">
-                {isEnglish 
-                  ? "Boost the development of advanced human capital by fostering STEAM+ skills, preparing citizens to lead and adapt to the dynamics of the Fourth Industrial Revolution." 
-                  : "Impulsar el desarrollo de capital humano avanzado mediante el fomento de competencias STEAM+, preparando a los ciudadanos para liderar y adaptarse a las dinámicas de la Cuarta Revolución Industrial (4RI)."}
+                {isEnglish
+                  ? 'We develop STEAM skills so more people can lead in a digital world.'
+                  : 'Formamos talento STEAM para que más personas puedan liderar en un mundo digital.'}
               </p>
             </div>
             {/* Cinta fluida (Onda central conectora) */}
@@ -79,9 +79,9 @@ export default function LinesTicsLand() {
                 {isEnglish ? "Business Strengthening" : "Fortalecimiento Empresarial"}
               </h3>
               <p className="ribbon-card-text">
-                {isEnglish 
-                  ? "Design and execute the intervention route that accelerates the digital and competitive maturity of the business fabric." 
-                  : "Diseñar y ejecutar la ruta de intervención que acelere la madurez digital y competitiva del tejido empresarial."}
+                {isEnglish
+                  ? 'We guide companies on a path to grow with more digital maturity and competitiveness.'
+                  : 'Acompañamos a empresas en una ruta para crecer con más madurez digital y competitividad.'}
               </p>
             </div>
             {/* Cinta fluida (Lazo final ascendente) */}

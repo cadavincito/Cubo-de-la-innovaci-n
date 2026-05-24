@@ -12,8 +12,8 @@
 
 /* BOTÓN FLOTANTE CIRCULAR */
 .chatbot-toggle-btn {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   background: linear-gradient(135deg, #084b83, #4361ee);
   color: white;
@@ -26,14 +26,16 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.chatbot-toggle-btn svg {
-  width: 28px;
-  height: 28px;
+.cubixcito-icon-btn {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
 }
 
 .chatbot-toggle-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 30px rgba(8, 75, 131, 0.5);
+  transform: scale(1.1);
+  box-shadow: 0 12px 35px rgba(8, 75, 131, 0.5);
 }
 
 /* VENTANA DEL CHAT */
@@ -78,18 +80,31 @@
   gap: 10px;
 }
 
-.chatbot-dot {
-  width: 10px;
-  height: 10px;
-  background-color: #4ade80; /* Puntito verde de "En línea" */
-  border-radius: 50%;
-  box-shadow: 0 0 8px #4ade80;
+.cubixcito-icon-header {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.2));
+}
+
+.chatbot-header-info > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .chatbot-header h3 {
   margin: 0;
   font-size: 1rem;
   font-weight: 600;
+}
+
+.chatbot-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #4ade80; /* Puntito verde de "En línea" */
+  border-radius: 50%;
+  box-shadow: 0 0 8px #4ade80;
 }
 
 .close-btn {
@@ -193,8 +208,13 @@
   }
 
   .chatbot-toggle-btn {
-    width: 52px;
-    height: 52px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .cubixcito-icon-btn {
+    width: 48px;
+    height: 48px;
   }
 
   .chatbot-window {
