@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ofertasData } from '../../constants/ofertasData';
+import ofertasData from '../../constants/ofertasData.json';
 import OfertaCard from '../../components/common/OfertaCard';
 import './OfertasPage.css';
 
@@ -8,44 +8,47 @@ export default function OfertasPage() {
   const { i18n } = useTranslation();
   const isEnglish = i18n.language === 'en';
 
-  // ESTADOS PARA LOS FILTROS
   const [categoriaActiva, setCategoriaActiva] = useState('Todas');
   const [perfilActivo, setPerfilActivo] = useState('Todos');
 
-  // LÓGICA DINÁMICA: Extraer categorías y perfiles únicos de los datos
   const categoriasUnicas = useMemo(() => {
-    const cats = ofertasData.flatMap(o => o.categorias);
+    const cats = ofertasData.flatMap((o) => o.categorias);
     return ['Todas', ...new Set(cats)];
   }, []);
 
   const perfilesUnicos = useMemo(() => {
-    const perfs = ofertasData.flatMap(o => o.perfiles);
+    const perfs = ofertasData.flatMap((o) => o.perfiles);
     return ['Todos', ...new Set(perfs)];
   }, []);
 
-  // FILTRADO DE LA LISTA
-  const ofertasFiltradas = ofertasData.filter(oferta => {
-    const cumpleCategoria = categoriaActiva === 'Todas' || oferta.categorias.includes(categoriaActiva);
-    const cumplePerfil = perfilActivo === 'Todos' || oferta.perfiles.includes(perfilActivo);
+  const ofertasFiltradas = ofertasData.filter((oferta) => {
+    const cumpleCategoria =
+      categoriaActiva === 'Todas' || oferta.categorias.includes(categoriaActiva);
+    const cumplePerfil =
+      perfilActivo === 'Todos' || oferta.perfiles.includes(perfilActivo);
     return cumpleCategoria && cumplePerfil;
   });
 
   return (
     <div className="ofertas-page-container">
       <header className="ofertas-header">
-        <h1>{isEnglish ? "Offers & Calls" : "Ofertas y Convocatorias"}</h1>
-        <p>{isEnglish ? "Explore all our active programs" : "Explora todos nuestros programas activos"}</p>
+        <h1>{isEnglish ? 'Offers & Calls' : 'Ofertas y Convocatorias'}</h1>
+        <p>
+          {isEnglish
+            ? 'Explore all our active programs'
+            : 'Explora todos nuestros programas activos'}
+        </p>
       </header>
 
       <div className="ofertas-content-layout">
-        {/* PANEL DE FILTROS (Lateral en Desktop) */}
         <aside className="filters-sidebar">
           <div className="filter-group">
-            <h3>{isEnglish ? "Category" : "Categoría"}</h3>
+            <h3>{isEnglish ? 'Category' : 'Categoría'}</h3>
             <div className="filter-buttons">
-              {categoriasUnicas.map(cat => (
-                <button 
+              {categoriasUnicas.map((cat) => (
+                <button
                   key={cat}
+                  type="button"
                   className={categoriaActiva === cat ? 'active' : ''}
                   onClick={() => setCategoriaActiva(cat)}
                 >
@@ -56,11 +59,12 @@ export default function OfertasPage() {
           </div>
 
           <div className="filter-group">
-            <h3>{isEnglish ? "Profile" : "Perfil"}</h3>
+            <h3>{isEnglish ? 'Profile' : 'Perfil'}</h3>
             <div className="filter-buttons">
-              {perfilesUnicos.map(perf => (
-                <button 
+              {perfilesUnicos.map((perf) => (
+                <button
                   key={perf}
+                  type="button"
                   className={perfilActivo === perf ? 'active' : ''}
                   onClick={() => setPerfilActivo(perf)}
                 >
@@ -71,21 +75,25 @@ export default function OfertasPage() {
           </div>
         </aside>
 
-        {/* GRILLA DE RESULTADOS */}
         <main className="ofertas-grid-container">
           <div className="results-count">
-            {isEnglish ? "Showing" : "Mostrando"} {ofertasFiltradas.length} {isEnglish ? "results" : "resultados"}
+            {isEnglish ? 'Showing' : 'Mostrando'} {ofertasFiltradas.length}{' '}
+            {isEnglish ? 'results' : 'resultados'}
           </div>
-          
+
           <div className="ofertas-grid">
-            {ofertasFiltradas.map(oferta => (
+            {ofertasFiltradas.map((oferta) => (
               <OfertaCard key={oferta.id} oferta={oferta} />
             ))}
           </div>
 
           {ofertasFiltradas.length === 0 && (
             <div className="no-results">
-              <p>{isEnglish ? "No offers found for these filters." : "No se encontraron ofertas con estos filtros."}</p>
+              <p>
+                {isEnglish
+                  ? 'No offers found for these filters.'
+                  : 'No se encontraron ofertas con estos filtros.'}
+              </p>
             </div>
           )}
         </main>

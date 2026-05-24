@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { eventosData } from '../../../constants/eventosData';
+import eventosData from '../../../constants/eventosData.json';
 import EventoCard from '../../../components/common/EventoCard';
 import './EventosSection.css';
 

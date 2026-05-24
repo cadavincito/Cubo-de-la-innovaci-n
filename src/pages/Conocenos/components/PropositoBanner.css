@@ -129,10 +129,44 @@
   margin: 0 auto;
 }
 
-/* RESPONSIVE (Ajustes menores) */
+@media (max-width: 992px) {
+  .proposito-banner-section {
+    min-height: auto;
+    height: auto;
+    padding: clamp(72px, 12vw, 100px) var(--section-padding-x, 5%);
+  }
+
+  .proposito-content-frame.compact {
+    margin-top: clamp(24px, 6vw, 48px);
+    max-width: min(650px, 92vw);
+  }
+}
+
 @media (max-width: 768px) {
-  .proposito-title-bold { font-size: 2.5rem; }
-  .proposito-text-body { font-size: 1.1rem; }
-  .proposito-content-frame.compact { padding: 30px 20px; }
-  .proposito-divider-accent { width: 70px; }
+  .proposito-title-bold {
+    font-size: clamp(2rem, 7vw, 2.5rem);
+  }
+
+  .proposito-text-body {
+    font-size: clamp(1rem, 2.8vw, 1.1rem);
+  }
+
+  .proposito-content-frame.compact {
+    padding: 28px 20px;
+  }
+
+  .proposito-divider-accent {
+    width: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .proposito-banner-section {
+    padding-top: 64px;
+    padding-bottom: 48px;
+  }
+
+  .proposito-title-bold {
+    font-size: 1.85rem;
+  }
 }

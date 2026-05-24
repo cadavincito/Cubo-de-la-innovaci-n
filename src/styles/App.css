@@ -10,6 +10,17 @@
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #f4f6f9;
+  overflow-x: hidden;
+}
+
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.main-content {
+  width: 100%;
 }
 
 /* ¡Esto quita los puntos de las listas! */

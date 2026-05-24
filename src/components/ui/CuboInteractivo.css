@@ -1,0 +1,208 @@
+.cubo-interactivo-section {
+  position: relative;
+  padding: var(--section-padding-y, 80px) var(--section-padding-x, 5%) 100px;
+  background: linear-gradient(180deg, #f0f6fc 0%, #ffffff 50%, #f8fafc 100%);
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+}
+
+.cubo-interactivo-section::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(600px, 100vw);
+  height: min(600px, 100vw);
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(11, 108, 181, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cubo-interactivo-header {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto clamp(32px, 6vw, 48px);
+  padding: 0 8px;
+}
+
+.cubo-interactivo-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 900;
+  color: #042444;
+  margin-bottom: 12px;
+  line-height: 1.15;
+}
+
+.cubo-interactivo-subtitle {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  color: #555;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.cubo-scene {
+  --cubo-size: clamp(140px, 28vw, 200px);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: clamp(260px, 45vw, 340px);
+  perspective: clamp(600px, 80vw, 1200px);
+  perspective-origin: 50% 45%;
+  padding: 0 8px;
+}
+
+.cubo-animator {
+  width: var(--cubo-size);
+  height: var(--cubo-size);
+  transform-style: preserve-3d;
+  animation: cubo-rotate 24s linear infinite;
+}
+
+.cubo-scene:hover .cubo-animator {
+  animation-play-state: paused;
+}
+
+@keyframes cubo-rotate {
+  from {
+    transform: rotateX(-18deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(-18deg) rotateY(360deg);
+  }
+}
+
+.cubo-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.cubo-face {
+  position: absolute;
+  width: var(--cubo-size);
+  height: var(--cubo-size);
+  margin: 0;
+  padding: clamp(12px, 2vw, 20px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  cursor: pointer;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
+  background: linear-gradient(
+    145deg,
+    #042444 0%,
+    var(--face-accent, #0967a6) 55%,
+    #0b6cb5 100%
+  );
+  color: #ffffff;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.15);
+  transition: filter 0.25s ease, box-shadow 0.25s ease;
+  font-family: inherit;
+}
+
+.cubo-face:hover,
+.cubo-face:focus-visible {
+  filter: brightness(1.12);
+  box-shadow:
+    inset 0 0 40px rgba(0, 0, 0, 0.1),
+    0 0 24px rgba(11, 108, 181, 0.35);
+  outline: 2px solid #00d2ff;
+  outline-offset: 2px;
+}
+
+.cubo-face-icon {
+  position: absolute;
+  top: clamp(10px, 2vw, 16px);
+  right: clamp(10px, 2vw, 16px);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  opacity: 0.85;
+}
+
+.cubo-face-title {
+  font-size: clamp(0.7rem, 1.8vw, 1rem);
+  font-weight: 800;
+  margin: 0 0 4px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cubo-face-desc {
+  font-size: clamp(0.6rem, 1.4vw, 0.75rem);
+  line-height: 1.35;
+  margin: 0;
+  opacity: 0.9;
+  max-width: 100%;
+}
+
+.cubo-face--front {
+  transform: rotateY(0deg) translateZ(calc(var(--cubo-size) / 2));
+}
+
+.cubo-face--back {
+  transform: rotateY(180deg) translateZ(calc(var(--cubo-size) / 2));
+}
+
+.cubo-face--right {
+  transform: rotateY(90deg) translateZ(calc(var(--cubo-size) / 2));
+}
+
+.cubo-face--left {
+  transform: rotateY(-90deg) translateZ(calc(var(--cubo-size) / 2));
+}
+
+.cubo-face--top {
+  transform: rotateX(90deg) translateZ(calc(var(--cubo-size) / 2));
+}
+
+.cubo-face--bottom {
+  transform: rotateX(-90deg) translateZ(calc(var(--cubo-size) / 2));
+}
+
+.cubo-interactivo-hint {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin: clamp(20px, 4vw, 32px) 0 0;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  color: #666;
+  font-weight: 500;
+  padding: 0 16px;
+}
+
+@media (max-width: 768px) {
+  .cubo-interactivo-section {
+    padding-top: 60px;
+    padding-bottom: 72px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cubo-scene {
+    --cubo-size: 130px;
+    min-height: 240px;
+  }
+
+  .cubo-face {
+    padding: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cubo-animator {
+    animation: none;
+    transform: rotateX(-18deg) rotateY(-30deg);
+  }
+}

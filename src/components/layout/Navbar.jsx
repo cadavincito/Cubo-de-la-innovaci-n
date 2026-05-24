@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next'; 
-import { menuLinks } from '../../constants/menuLinks';
+import menuLinks from '../../constants/menuLinks.json';
 import './Navbar.css';
 
 import logoCubo from '../../assets/images/logo-cubo.png'; 
@@ -47,7 +47,6 @@ export default function Navbar() {
   return (
     <header className="navbar-wrapper">
       
-      {/* TOPBAR */}
       <div className="topbar">
         <div className="topbar-container">
           <div className="topbar-content-right">
@@ -71,7 +70,6 @@ export default function Navbar() {
                 </a>
               </li>
               
-              {/* BOTONES DE IDIOMA */}
               <li className="topbar-icon-item language-switch" title="Cambiar idioma">
                 <span 
                   className={i18n.language === 'es' ? 'lang-active' : 'lang-inactive'}
@@ -100,7 +98,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* MAIN NAVBAR */}
       <nav className="main-navbar">
         <div className="logo-container">
           <Link to="/">

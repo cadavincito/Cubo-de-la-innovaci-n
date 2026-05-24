@@ -112,7 +112,7 @@
 @media (max-width: 1100px) {
   .servicios-container {
     flex-direction: column;
-    padding: 0 20px;
+    padding: 0 var(--section-padding-x, 20px);
     gap: 40px;
   }
   .servicios-header {
@@ -120,6 +120,39 @@
     padding-left: 0;
     text-align: center;
   }
-  .servicios-title { font-size: 2.8rem; }
-  .servicios-desc { margin: 0 auto; }
+  .servicios-title {
+    font-size: clamp(2rem, 5vw, 2.8rem);
+  }
+  .servicios-desc {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .servicios-section {
+    padding: clamp(60px, 12vw, 100px) 0;
+  }
+
+  .servicio-slide-card {
+    width: min(280px, 85vw);
+    height: auto;
+    min-height: 360px;
+    padding: 28px;
+  }
+
+  .servicio-card-content h3 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+
+  .servicio-card-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .servicio-slide-card {
+    width: min(260px, 90vw);
+    min-height: 320px;
+  }
 }

@@ -1,0 +1,127 @@
+{
+  "emprendedorPrograms": [
+    {
+      "id": "academy",
+      "titleKey": "emprendedor_page.programs.academy_title",
+      "descKey": "emprendedor_page.programs.academy_desc",
+      "path": "/servicios/academy",
+      "color": "linear-gradient(135deg, #f97316 0%, #ea580c 100%)"
+    },
+    {
+      "id": "land",
+      "titleKey": "emprendedor_page.programs.land_title",
+      "descKey": "emprendedor_page.programs.land_desc",
+      "path": "/servicios/land",
+      "color": "linear-gradient(135deg, #10b981 0%, #059669 100%)"
+    },
+    {
+      "id": "maker",
+      "titleKey": "emprendedor_page.programs.maker_title",
+      "descKey": "emprendedor_page.programs.maker_desc",
+      "path": "/espacios/maker-space",
+      "color": "linear-gradient(135deg, #0967a6 0%, #042444 100%)"
+    },
+    {
+      "id": "riogo",
+      "titleKey": "emprendedor_page.programs.riogo_title",
+      "descKey": "emprendedor_page.programs.riogo_desc",
+      "path": "/servicios/riogo",
+      "color": "linear-gradient(135deg, #6d28d9 0%, #4c1d95 100%)"
+    },
+    {
+      "id": "cowork",
+      "titleKey": "emprendedor_page.programs.cowork_title",
+      "descKey": "emprendedor_page.programs.cowork_desc",
+      "path": "/espacios/coworklabs",
+      "color": "linear-gradient(135deg, #0d9488 0%, #0f766e 100%)"
+    }
+  ],
+  "emprendedorPhases": [
+    {
+      "id": "ideacion",
+      "number": "01",
+      "titleKey": "emprendedor_page.phases.ideacion_title",
+      "descKey": "emprendedor_page.phases.ideacion_desc",
+      "path": "/servicios/land",
+      "color": "#0056b3"
+    },
+    {
+      "id": "preincubacion",
+      "number": "02",
+      "titleKey": "emprendedor_page.phases.preincubacion_title",
+      "descKey": "emprendedor_page.phases.preincubacion_desc",
+      "path": "/servicios/land",
+      "color": "#e85d04"
+    },
+    {
+      "id": "incubacion",
+      "number": "03",
+      "titleKey": "emprendedor_page.phases.incubacion_title",
+      "descKey": "emprendedor_page.phases.incubacion_desc",
+      "path": "/servicios/land",
+      "color": "#0077b6"
+    }
+  ],
+  "empresarioPrograms": [
+    {
+      "id": "rioinnova",
+      "titleKey": "empresario_page.programs.rioinnova_title",
+      "descKey": "empresario_page.programs.rioinnova_desc",
+      "path": "/servicios/rioinnova",
+      "color": "linear-gradient(135deg, #0967a6 0%, #042444 100%)"
+    },
+    {
+      "id": "land",
+      "titleKey": "empresario_page.programs.land_title",
+      "descKey": "empresario_page.programs.land_desc",
+      "path": "/servicios/land",
+      "color": "linear-gradient(135deg, #10b981 0%, #059669 100%)"
+    },
+    {
+      "id": "hub",
+      "titleKey": "empresario_page.programs.hub_title",
+      "descKey": "empresario_page.programs.hub_desc",
+      "path": "/servicios/hubtics",
+      "color": "linear-gradient(135deg, #6d28d9 0%, #4c1d95 100%)"
+    },
+    {
+      "id": "smartcity",
+      "titleKey": "empresario_page.programs.smartcity_title",
+      "descKey": "empresario_page.programs.smartcity_desc",
+      "path": "/servicios/smartcity",
+      "color": "linear-gradient(135deg, #0d9488 0%, #0f766e 100%)"
+    },
+    {
+      "id": "observatorio",
+      "titleKey": "empresario_page.programs.observatorio_title",
+      "descKey": "empresario_page.programs.observatorio_desc",
+      "path": "/servicios/observatorio",
+      "color": "linear-gradient(135deg, #f97316 0%, #ea580c 100%)"
+    },
+    {
+      "id": "riogo",
+      "titleKey": "empresario_page.programs.riogo_title",
+      "descKey": "empresario_page.programs.riogo_desc",
+      "path": "/servicios/riogo",
+      "color": "linear-gradient(135deg, #2a9d8f 0%, #1d6f63 100%)"
+    }
+  ],
+  "empresarioPhases": [
+    {
+      "id": "aceleracion",
+      "number": "04",
+      "titleKey": "empresario_page.phases.aceleracion_title",
+      "descKey": "empresario_page.phases.aceleracion_desc",
+      "path": "/servicios/land",
+      "color": "#2a9d8f"
+    },
+    {
+      "id": "internacionalizacion",
+      "number": "05",
+      "titleKey": "empresario_page.phases.internacionalizacion_title",
+      "descKey": "empresario_page.phases.internacionalizacion_desc",
+      "path": "/servicios/land",
+      "color": "#ca6702"
+    }
+  ]
+}

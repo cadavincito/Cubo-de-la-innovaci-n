@@ -94,7 +94,23 @@
     overflow-x: auto; /* Devolvemos el scroll táctil para deslizar con el dedo */
   }
 
-  .left-arrow, .right-arrow {
-    display: none; /* Ocultamos los botones en celular */
+  .left-arrow,
+  .right-arrow {
+    display: none;
+  }
+
+  .ofertas-carousel-wrapper {
+    padding: 12px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .ofertas-scroll-container {
+    gap: 16px;
+    padding: 12px 8px;
+  }
+
+  .ofertas-scroll-container > div {
+    flex: 0 0 calc(100% - 16px);
   }
 }

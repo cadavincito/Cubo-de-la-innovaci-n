@@ -115,9 +115,18 @@
   transform: translateX(5px); /* La flecha se mueve a la derecha */
 }
 
-.oferta-card {
-  width: 320px; 
-  flex: 0 0 auto; /* ¡Asegúrate de agregar esta línea! */
-  background-color: #ffffff;
-  /* ... resto de tu código ... */
+@media (max-width: 768px) {
+  .oferta-card-header {
+    height: clamp(160px, 40vw, 200px);
+  }
+
+  .oferta-card-title {
+    font-size: clamp(1rem, 3vw, 1.15rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .oferta-card-body {
+    padding: 16px;
+  }
 }

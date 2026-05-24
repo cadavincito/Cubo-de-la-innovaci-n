@@ -187,4 +187,38 @@
   .ofertas-grid {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   }
+
+  .ofertas-page-container {
+    padding-top: 100px;
+    padding-left: var(--section-padding-x, 5%);
+    padding-right: var(--section-padding-x, 5%);
+  }
+
+  .ofertas-header h1 {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+  }
+}
+
+@media (max-width: 576px) {
+  .ofertas-page-container {
+    padding-top: 88px;
+    padding-bottom: 48px;
+  }
+
+  .ofertas-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .ofertas-header {
+    margin-bottom: 36px;
+  }
+
+  .filter-buttons {
+    flex-direction: column;
+  }
+
+  .filter-buttons button {
+    width: 100%;
+  }
 }

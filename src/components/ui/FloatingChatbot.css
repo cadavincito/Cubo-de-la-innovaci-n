@@ -186,9 +186,19 @@
 }
 
 /* RESPONSIVE */
-@media (max-width: 480px) {
+@media (max-width: 576px) {
+  .floating-chatbot-container {
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .chatbot-toggle-btn {
+    width: 52px;
+    height: 52px;
+  }
+
   .chatbot-window {
-    width: 90vw; /* Ocupa casi todo el ancho en celulares */
-    height: 60vh;
+    width: min(350px, calc(100vw - 32px));
+    height: min(500px, 65vh);
   }
 }

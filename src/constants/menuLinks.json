@@ -28,8 +28,8 @@
     "hasDropdown": true,
     "subItems": [
       { "title": "Maker Space", "path": "/espacios/maker-space" },
-      { "title": "CoWorklab", "path": "/espacios/CoWorklab" },
-      { "title": "Cubo de la Innovación", "path": "/Cubo-de-la-Innovación" }
+      { "title": "CoWorklab", "path": "/espacios/coworklabs" },
+      { "title": "Cubo de la Innovación", "path": "/espacios/cubo-innovacion" }
     ]
   },
   {

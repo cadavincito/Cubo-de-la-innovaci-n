@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import OfertasCarousel from '../../../components/ui/OfertasCarousel';
-import { ofertasData } from '../../../constants/ofertasData';
+import ofertasData from '../../../constants/ofertasData.json';
 import './OfertasSection.css';
 
 export default function OfertasSection() {
