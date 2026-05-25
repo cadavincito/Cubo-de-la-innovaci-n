@@ -9,7 +9,7 @@ const resources = {
         "route_cta": "Cuéntanos dónde estás: te mostramos lo que más te sirve",
         "btn_conocenos": "Conócenos",
         "btn_espacios": "Ver espacios",
-        "btn_empresario": "Ya tengo mi negocio",
+        "btn_empresario": "Soy empresario",
         "btn_emprendedor": "Quiero emprender"
       },
       "ofertas_eventos": {
@@ -234,7 +234,7 @@ const resources = {
         "route_cta": "Tell us where you are — we'll show you what fits you best",
         "btn_conocenos": "About us",
         "btn_espacios": "See our spaces",
-        "btn_empresario": "I already have a business",
+        "btn_empresario": "I'm a business owner",
         "btn_emprendedor": "I want to start"
       },
       "ofertas_eventos": {
