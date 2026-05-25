@@ -1,22 +1,16 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import DSC02687 from '../../../assets/images/DSC02687.webp'
-import DSC02734 from '../../../assets/images/DSC02734.webp'
-import DSC02815 from '../../../assets/images/DSC02815.webp'
+import DSC02687 from '../../../assets/images/DSC02687.webp';
+import DSC02734 from '../../../assets/images/DSC02734.webp';
+import DSC02815 from '../../../assets/images/DSC02815.webp';
+import cubo1   from '../../../assets/images/cubo1.webp';
+import cubo2   from '../../../assets/images/cubo2.webp';
+import cubo3   from '../../../assets/images/cubo3.webp';
 
-// Array de imágenes para la animación (fotos reales o de stock)
-const col1Images = [
-  "https://rionegro.gov.co/info/rionegro_se/media/pubInt/thumbs/thpubInt_700X400_948.webp",
-  "https://cubodelainnovacion.com/wp-content/uploads/2025/06/Imagen-de-WhatsApp-2025-06-09-a-las-08.50.08_1f808566-768x1024.jpg",
-  "https://cubodelainnovacion.com/wp-content/uploads/2025/09/Imagen-de-WhatsApp-2025-09-02-a-las-10.32.25_dc80c494-1024x768.jpg"
-];
+const col1Images = [cubo1, cubo2, cubo3];
 
-const col2Images = [
-  DSC02687,
-  DSC02734,
-  DSC02815,
-];
+const col2Images = [DSC02687, DSC02734, DSC02815];
 
 export default function AboutTics() {
   const { i18n } = useTranslation();
