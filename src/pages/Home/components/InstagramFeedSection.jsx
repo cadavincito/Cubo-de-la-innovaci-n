@@ -3,10 +3,10 @@ import { useTranslation } from 'react-i18next';
 import './InstagramFeedSection.css';
 
 // Import images
-import cubo1 from '../../../assets/images/cubo1.jpeg';
-import cubo2 from '../../../assets/images/cubo2.jpeg';
-import cubo3 from '../../../assets/images/cubo3.jpeg';
-import cubo4 from '../../../assets/images/cubo4.jpeg';
+import cubo1 from '../../../assets/images/cubo1.jpg';
+import cubo2 from '../../../assets/images/cubo2.jpg';
+import cubo3 from '../../../assets/images/cubo3.jpg';
+import cubo4 from '../../../assets/images/cubo4.jpg';
 
 export default function InstagramFeedSection() {
   const { t } = useTranslation();
