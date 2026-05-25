@@ -1,26 +1,6 @@
 [
   {
     "id": 1,
-    "fechaOrden": "2026-05-21",
-    "image": "Curso27.webp",
-    "link": "https://luma.com/scy9hdqq",
-    "categorias": ["Charlas", "Eventos"],
-    "perfiles": ["Empresario", "Emprendedor"],
-    "es": {
-      "category": "Charla",
-      "date": "21 de mayo, 5:00 p.m.",
-      "title": "Dejar de improvisar y empezar a vender",
-      "description": "Convierte tu proceso comercial en un sistema que sí funciona."
-    },
-    "en": {
-      "category": "Talk",
-      "date": "May 21, 5:00 p.m.",
-      "title": "Stop improvising and start selling",
-      "description": "Turn your commercial process into a system that actually works."
-    }
-  },
-  {
-    "id": 2,
     "fechaOrden": "2026-05-07",
     "image": "canvataller.webp",
     "link": "https://forms.cloud.microsoft/r/kCDi7ckwfv?origin=lprLink",
@@ -40,7 +20,7 @@
     }
   },
   {
-    "id": 3,
+    "id": 2,
     "fechaOrden": "2026-05-27",
     "image": "Curso25.webp",
     "link": "https://forms.cloud.microsoft/r/aRMwqUqDQ8?origin=lprLink",
@@ -60,7 +40,7 @@
     }
   },
   {
-    "id": 4,
+    "id": 3,
     "fechaOrden": "2026-05-21",
     "image": "Curso26.webp",
     "link": "https://forms.cloud.microsoft/r/m19u3BkBgT?origin=lprLink",
