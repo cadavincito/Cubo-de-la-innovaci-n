@@ -8,6 +8,14 @@
   flex-direction: column;
   align-items: flex-end;
   font-family: 'Montserrat', sans-serif;
+  /*
+   * Sin esto el div del contenedor cubre toda la esquina inferior derecha
+   * (incluye el área de la ventana del chat aunque esté invisible) y bloquea
+   * los clics en los botones de la página que quedan debajo en mobile.
+   * Al poner none aquí y auto en el botón y la ventana abierta, solo
+   * los elementos visibles/interactivos reciben eventos de puntero.
+   */
+  pointer-events: none;
 }
 
 /* BOTÓN FLOTANTE CIRCULAR */
@@ -24,6 +32,7 @@
   justify-content: center;
   align-items: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  pointer-events: auto; /* Restauramos eventos solo en el botón real */
 }
 
 .cubixcito-icon-btn {
@@ -61,7 +70,7 @@
 .chatbot-window.open {
   opacity: 1;
   transform: translateY(0) scale(1);
-  pointer-events: all;
+  pointer-events: auto; /* Ventana recibe eventos solo cuando está abierta */
 }
 
 /* CABECERA AZUL DEL CHAT */
