@@ -1,0 +1,222 @@
+/* =========================================
+   PÁGINAS DE SUB-OFERTAS: Cursos y Convocatorias
+   Mismo layout que OfertasPage, clases propias
+   para evitar dependencias cruzadas.
+   ========================================= */
+
+.subofertas-page-container {
+  padding: 120px 5% 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ---- CABECERA ---- */
+.subofertas-header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.subofertas-header h1 {
+  background: linear-gradient(90deg, #084b83 0%, #4361ee 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 15px;
+  letter-spacing: -1.5px;
+}
+
+.subofertas-header p {
+  color: #64748b;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.subofertas-header::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #4361ee;
+  margin: 25px auto 0;
+  border-radius: 4px;
+}
+
+/* Variante de acento para Convocatorias */
+.subofertas-header--convocatorias h1 {
+  background: linear-gradient(90deg, #064e3b 0%, #059669 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subofertas-header--convocatorias::after {
+  background-color: #059669;
+}
+
+/* ---- LAYOUT: Sidebar + Grilla ---- */
+.subofertas-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+/* ---- SIDEBAR ---- */
+.suboferta-filters-sidebar {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f1f5f9;
+  height: fit-content;
+  position: sticky;
+  top: 120px;
+}
+
+.suboferta-filter-group {
+  margin-bottom: 10px;
+}
+
+.suboferta-filter-group h3 {
+  font-size: 1.05rem;
+  color: #1e293b;
+  margin-bottom: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.suboferta-filter-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.suboferta-filter-buttons button {
+  width: 100%;
+  text-align: left;
+  background: #f8fafc;
+  border: 1px solid transparent;
+  padding: 12px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.2s ease;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.suboferta-filter-buttons button:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+  transform: translateX(4px);
+}
+
+.suboferta-filter-buttons button.active {
+  background: #084b83;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(8, 75, 131, 0.25);
+}
+
+/* ---- CONTADOR DE RESULTADOS ---- */
+.suboferta-results-count {
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #084b83;
+  background-color: #f1f5f9;
+  padding: 8px 18px;
+  border-radius: 20px;
+  display: inline-block;
+  border: 1px solid #e2e8f0;
+  letter-spacing: 0.3px;
+}
+
+/* ---- GRILLA DE TARJETAS ---- */
+.suboferta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  align-items: stretch;
+}
+
+/* ---- ESTADO VACÍO ---- */
+.suboferta-no-results {
+  text-align: center;
+  padding: 60px 20px;
+  color: #94a3b8;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 1200px) {
+  .suboferta-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .subofertas-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .suboferta-filters-sidebar {
+    position: static;
+  }
+
+  .suboferta-filter-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .suboferta-filter-buttons button {
+    width: auto;
+  }
+
+  .suboferta-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+
+  .subofertas-page-container {
+    padding-top: 100px;
+  }
+
+  .subofertas-header h1 {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+  }
+}
+
+@media (max-width: 576px) {
+  .subofertas-page-container {
+    padding-top: 88px;
+    padding-bottom: 48px;
+  }
+
+  .subofertas-header {
+    margin-bottom: 36px;
+  }
+
+  .suboferta-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .suboferta-filter-buttons {
+    flex-direction: column;
+  }
+
+  .suboferta-filter-buttons button {
+    width: 100%;
+  }
+}

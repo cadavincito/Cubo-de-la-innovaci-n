@@ -17,6 +17,8 @@ import MakerSpace from './pages/Espacios/components/MakerSpace';
 import Coworklabs from './pages/Espacios/components/Coworklabs';
 import CuboInnovacion from './pages/Espacios/components/CuboInnovacion';
 import OfertasPage from './pages/Ofertas/OfertasPage';
+import CursosPage from './pages/Cursos/CursosPage';
+import ConvocatoriasPage from './pages/Convocatorias/ConvocatoriasPage';
 import EmprendedorPage from './pages/Emprendedor/EmprendedorPage';
 import EmpresarioPage from './pages/Empresario/EmpresarioPage';
 import Contacto from './pages/Contacto/ContactoPage';
@@ -45,6 +47,8 @@ function App() {
             <Route path="/espacios/coworklabs" element={<Coworklabs />} />
             <Route path="/espacios/cubo-innovacion" element={<CuboInnovacion />} />
             <Route path="/ofertas" element={<OfertasPage />} />
+            <Route path="/ofertas/cursos" element={<CursosPage />} />
+            <Route path="/ofertas/convocatorias" element={<ConvocatoriasPage />} />
             <Route path="/emprendedor" element={<EmprendedorPage />} />
             <Route path="/empresario" element={<EmpresarioPage />} />
             <Route path="/contacto" element={<Contacto />} />

@@ -10,6 +10,7 @@ export default function ContactoPage() {
     nombre: '',
     apellidos: '',
     correo: '',
+    solicitud: '',
     terminos: false
   });
   
@@ -42,13 +43,14 @@ export default function ContactoPage() {
         body: JSON.stringify({
           Nombre: formData.nombre,
           Apellidos: formData.apellidos,
-          Correo: formData.correo
+          Correo: formData.correo,
+          Solicitud: formData.solicitud
         })
       });
 
       if (response.ok) {
         setEstadoEnvio('exito');
-        setFormData({ nombre: '', apellidos: '', correo: '', terminos: false });
+        setFormData({ nombre: '', apellidos: '', correo: '', solicitud: '', terminos: false });
       } else {
         setEstadoEnvio('error');
       }
@@ -116,6 +118,19 @@ export default function ContactoPage() {
                 <div className="form-group">
                   <label>Correo*</label>
                   <input type="email" name="correo" placeholder="Correo electrónico" value={formData.correo} onChange={handleChange} required />
+                </div>
+
+                <div className="form-group">
+                  <label>Solicitud*</label>
+                  <textarea
+                    name="solicitud"
+                    placeholder="Cuéntanos en qué podemos ayudarte…"
+                    value={formData.solicitud}
+                    onChange={handleChange}
+                    required
+                    rows={4}
+                    className="form-textarea"
+                  />
                 </div>
 
                 <div className="form-checkbox">

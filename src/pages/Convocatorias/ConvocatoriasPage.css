@@ -1,0 +1,5 @@
+/* Reutiliza todos los estilos de CursosPage.
+   Las clases son las mismas (.subofertas-*, .suboferta-*).
+   Solo se importa para que el CSS esté disponible
+   aunque el usuario llegue directo a esta ruta. */
+@import url('../Cursos/CursosPage.css');

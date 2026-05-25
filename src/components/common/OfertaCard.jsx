@@ -3,10 +3,11 @@ import { useTranslation } from 'react-i18next';
 import './OfertaCard.css';
 
 const OFERTA_IMAGES = {
-  'convocatoria-alimentos.webp': new URL('../../assets/images/convocatoria-alimentos.webp', import.meta.url).href,
-  'canvataller.webp': new URL('../../assets/images/canvataller.webp', import.meta.url).href,
-  'Curso25.webp': new URL('../../assets/images/Curso25.webp', import.meta.url).href,
-  'Curso26.webp': new URL('../../assets/images/Curso26.webp', import.meta.url).href,
+  'canvataller.webp':      new URL('../../assets/images/canvataller.webp',      import.meta.url).href,
+  'Curso25.webp':          new URL('../../assets/images/Curso25.webp',          import.meta.url).href,
+  'Curso26.webp':          new URL('../../assets/images/Curso26.webp',          import.meta.url).href,
+  'Curso27.webp':          new URL('../../assets/images/Curso27.webp',          import.meta.url).href,
+  'plaza-libertad.webp':   new URL('../../assets/images/plaza-libertad.webp',   import.meta.url).href,
 };
 
 function resolveOfertaImage(image) {
