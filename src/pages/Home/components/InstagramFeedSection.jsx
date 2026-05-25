@@ -3,9 +3,10 @@ import { useTranslation } from 'react-i18next';
 import './InstagramFeedSection.css';
 
 // Import images
-import cubo1 from '../../../assets/images/cubo1.webp';
-import cubo2 from '../../../assets/images/cubo2.webp';
-import cubo3 from '../../../assets/images/cubo3.webp';
+import cubo1 from '../../../assets/images/cubo1.jpeg';
+import cubo2 from '../../../assets/images/cubo2.jpeg';
+import cubo3 from '../../../assets/images/cubo3.jpeg';
+import cubo4 from '../../../assets/images/cubo4.jpeg';
 
 export default function InstagramFeedSection() {
   const { t } = useTranslation();
@@ -13,7 +14,8 @@ export default function InstagramFeedSection() {
   const posts = [
     { id: 1, img: cubo1 },
     { id: 2, img: cubo2 },
-    { id: 3, img: cubo3 }
+    { id: 3, img: cubo3 },
+    { id: 4, img: cubo4 }
   ];
 
   return (
