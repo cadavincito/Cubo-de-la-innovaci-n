@@ -81,11 +81,12 @@
 
 /* ESTILOS DEL LOGO */
 .banner-cubo-logo {
-  width: 100%;
-  max-width: 400px; /* Lo hice un poco más grande para que impacte más */
-  height: auto;
+  width: auto;          /* Respeta dimensiones naturales */
+  max-width: 400px;
+  height: auto;         /* Mantiene proporción siempre */
+  display: block;
   opacity: 0.9;
-  /* Le agregamos un resplandor atrás para que destaque como neón */
+  object-fit: contain;  /* Nunca estira la imagen */
   filter: drop-shadow(0 0 20px rgba(74, 141, 235, 0.4));
 }
 
@@ -143,26 +144,35 @@
   transform: translateY(-2px);
 }
 
-/* Responsive para celulares */
+/* Responsive para tablets y celulares */
 @media (max-width: 992px) {
   .banner-conocenos-container {
     flex-direction: column;
     text-align: center;
     gap: 40px;
   }
-  
+
   .banner-conocenos-content-area {
     max-width: 100%;
     align-items: center;
     text-align: center;
   }
-  
+
   .banner-conocenos-logo-area {
+    /*
+     * En desktop flex: 0 0 350px impone 350px de ANCHO (layout de fila).
+     * Al cambiar a column, ese mismo flex-basis se convierte en ALTURA,
+     * deformando la caja y la imagen. Se resetea a auto para que el
+     * contenedor se ajuste al tamaño real de la imagen.
+     */
+    flex: 0 0 auto;
+    width: 100%;
     justify-content: center;
   }
-  
+
   .banner-cubo-logo {
     max-width: 200px;
+    margin: 0 auto; /* Centra el bloque cuando display: block */
   }
 
   .banner-conocenos-title {
@@ -197,6 +207,6 @@
 
 @media (max-width: 480px) {
   .banner-cubo-logo {
-    max-width: 160px;
+    max-width: 140px;
   }
 }
