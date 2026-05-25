@@ -186,8 +186,8 @@ El resultado en `/dist` es un sitio estático que puede alojarse en cualquier CD
 
 ## Autores
 
-- **Lauro Orozco** — Desarrollo
-- **Mateo Alzate** — Desarrollo
+- **Lauro Orozco** — Diseño
+- **Mateo Alzate** — Diseño
 - **Antonio Cadavid** — Desarrollo
 - **Andrea Botero** — Desarrollo
 
